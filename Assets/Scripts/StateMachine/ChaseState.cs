@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class ChaseState : State
 {
+    [SerializeField] IdleState idleState;
     [SerializeField] AttackState attackState;
     [SerializeField] bool inRange;
+    [SerializeField] bool outRange;
     public override State RunCurrentState()
     {
-        if(inRange) 
-        {
-            Debug.Log("I can Attack you");
-            return attackState;
-        }
-        else
-        {
-            Debug.Log("i chase");
-            return this;
-        }
+            
+        return this;
+        
     }
 }

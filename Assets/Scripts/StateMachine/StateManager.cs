@@ -19,8 +19,12 @@ public class StateManager : MonoBehaviour
             SwitchNextState(nextState);
         }
     }
+    public State GetState()
+    {
+        return currentState;
+    }
 
-    private void SwitchNextState(State nextState)
+    public void SwitchNextState(State nextState)
     {
         currentState = nextState;
     }
