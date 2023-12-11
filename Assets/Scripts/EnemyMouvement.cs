@@ -14,7 +14,7 @@ public class EnemyMouvement : MonoBehaviour
     [SerializeField]
     private float lookRadius;
 
-    
+    private bool destination;
 
     [SerializeField]
     private float walkSpeed;
@@ -23,7 +23,16 @@ public class EnemyMouvement : MonoBehaviour
     private Animator EnemyAnim;
 
     [SerializeField]
-    private float wanderRingWaitTime;
+    private float wanderRingWaitTimeMin;
+
+    [SerializeField]
+    private float wanderRingWaitTimeMax;
+
+    [SerializeField]
+    private float wanderRingDistanceMin;
+
+    [SerializeField]
+    private float wanderRingDistanceMax;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +47,26 @@ public class EnemyMouvement : MonoBehaviour
         {
             enemy.SetDestination(player.position);
         }
+        else
+        {
+
+        }
+    }
+
+    IEnumerator GetNewDestination()
+    {
+        destination = true;
+        yield return new WaitForSeconds(Random.Range(wanderRingWaitTimeMin, wanderRingWaitTimeMax));
+
+        Vector3 nextDestination = player.position;
+        nextDestination += new Vector3(Random.Range(wanderRingDistanceMin, wanderRingDistanceMax), 0f, Random.Range(-1f, 1)).normalized;
+
+        NavMeshHit hit;
+        if(NavMesh.SamplePosition(nextDestination,out hit,wanderRingDistanceMax,NavMesh.AllAreas))
+        {
+            enemy.SetDestination(hit.position);
+        }
+        destination = false;
     }
 
     private void OnDrawGizmos()
