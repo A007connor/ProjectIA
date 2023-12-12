@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 00000000000000000000000000000000
+  productGUID: afb360817ba98de46b676db6c8d1f53e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -720,7 +720,7 @@ PlayerSettings:
   cloudProjectId: 58a997b7-b758-4bd5-9ee4-37ce7cd1816b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: ProjectIA
   organizationId: arolo_unity
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
