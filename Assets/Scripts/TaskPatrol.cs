@@ -32,6 +32,7 @@ public class TaskPatrol : Node
             if(waitCounter >= waitTime)
             {
                 waiting = false;
+                EnemyAnim.SetBool("Walking", true);
             }
         }
        else
@@ -44,6 +45,7 @@ public class TaskPatrol : Node
                 waiting = true;
 
                 currentWaypointIndex = (currentWaypointIndex + 1) % _waypoints.Length;
+                EnemyAnim.SetBool("Walking", false);
             }
             else
             {
