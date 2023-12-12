@@ -1748,7 +1748,6 @@ Transform:
   m_Children:
   - {fileID: 968146730}
   - {fileID: 289531367}
-  - {fileID: 1478608679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968146729
@@ -5022,7 +5021,7 @@ Transform:
   m_Children:
   - {fileID: 2146494143}
   - {fileID: 1629501788}
-  m_Father: {fileID: 502626174}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1478608680
 MonoBehaviour:
@@ -5060,6 +5059,7 @@ MonoBehaviour:
   currentState: {fileID: 1478608680}
   playerTransform: {fileID: 205369336}
   moveSpeed: 3
+  chargeSpeed: 10
   chaseState: {fileID: 1824602020}
   attackState: {fileID: 1631003200}
 --- !u!61 &1478608682
@@ -5395,5 +5395,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1337777600}
+  - {fileID: 1478608679}
   - {fileID: 502626174}
   - {fileID: 202392378}
