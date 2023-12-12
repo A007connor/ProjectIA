@@ -146,10 +146,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6013052957643680159, guid: 7340b8451a3874b44a2951c73626bd85,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013052957643680159, guid: 7340b8451a3874b44a2951c73626bd85,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7607151405582801055, guid: 7340b8451a3874b44a2951c73626bd85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607151405582801055, guid: 7340b8451a3874b44a2951c73626bd85,
         type: 3}
@@ -4989,6 +4999,7 @@ GameObject:
   - component: {fileID: 1478608680}
   - component: {fileID: 1478608681}
   - component: {fileID: 1478608682}
+  - component: {fileID: 1478608683}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Untagged
@@ -5041,6 +5052,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
   maxhp: 8
   currentHp: 0
   currentState: {fileID: 1478608680}
@@ -5080,7 +5094,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011114217, y: -0.21950549}
+  m_Offset: {x: 0, y: -0.23}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5091,8 +5105,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43317598, y: 0.18310642}
+  m_Size: {x: 0.48, y: 0.18}
   m_EdgeRadius: 0
+--- !u!50 &1478608683
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478608678}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 6000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1629501787
 GameObject:
   m_ObjectHideFlags: 0

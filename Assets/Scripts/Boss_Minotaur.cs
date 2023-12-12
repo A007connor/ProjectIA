@@ -5,13 +5,16 @@ using UnityEngine;
 public class Boss_Minotaur : MonoBehaviour
 {
     [SerializeField] LayerMask wallLayer;
+    [SerializeField] LayerMask playerLayer;
     [SerializeField] int maxhp = 8;
     [SerializeField] int currentHp;
     [SerializeField] StateManager currentState;
     [SerializeField] Transform playerTransform;
     [SerializeField] float moveSpeed;
+    [SerializeField] float chargeSpeed;
     [SerializeField] ChaseState chaseState;
     [SerializeField] AttackState attackState;
+    Vector3 chargeDirection;
 
 
     // Start is called before the first frame update
@@ -28,10 +31,16 @@ public class Boss_Minotaur : MonoBehaviour
         if (currentState.GetState() is ChaseState)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, playerTransform.position, moveSpeed * Time.deltaTime);
+            chargeDirection = Vector3.zero;
         }
         if(currentState.GetState() is AttackState)
         {
-            //transform.Translate(playerTransform.transform.position* 3*Time.deltaTime);
+            if(chargeDirection == Vector3.zero)
+            {
+                chargeDirection =(playerTransform.position - transform.position).normalized;
+                
+            }
+            transform.position = Vector2.MoveTowards(transform.position,transform.position + chargeDirection, chargeSpeed * Time.deltaTime);
         }
         if (currentHp == 0)
         {
@@ -45,6 +54,7 @@ public class Boss_Minotaur : MonoBehaviour
             currentHp -= 1;
             Debug.Log("hurt");
         }
+
     }
     void Death()
     {
@@ -54,8 +64,8 @@ public class Boss_Minotaur : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         Debug.Log(distanceToPlayer);
-        if (distanceToPlayer <= 5f) currentState.SwitchNextState(chaseState);
-        if (distanceToPlayer <= 3f) currentState.SwitchNextState(attackState);
+        if (distanceToPlayer <= 6f) currentState.SwitchNextState(chaseState);
+        if (distanceToPlayer <= 4f) currentState.SwitchNextState(attackState);
     }
 
 }
