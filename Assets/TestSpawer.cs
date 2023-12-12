@@ -41,6 +41,8 @@ public class TestSpawer : MonoBehaviour
 
     public void LoadGame()
     {
+
+        Clear();
         string dataToLoad = "";
         dataToLoad = saveSystem.LoadData();
         if (String.IsNullOrEmpty(dataToLoad)==false)
