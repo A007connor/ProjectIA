@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,69 +10,70 @@ public class EnemyMouvement : MonoBehaviour
     private Transform player;
 
     [SerializeField]
-    private NavMeshAgent enemy;
+    public NavMeshAgent Orc;
 
     [SerializeField]
-    private float lookRadius;
-
-    private bool destination;
+    private float lookRadius = 10f;
 
     [SerializeField]
-    private float walkSpeed;
+    private float walk;
 
     [SerializeField]
-    private Animator EnemyAnim;
+    private float Chase;
 
-    [SerializeField]
-    private float wanderRingWaitTimeMin;
+    private bool hasDestination;
 
-    [SerializeField]
-    private float wanderRingWaitTimeMax;
+    [SerializeField] private float wanderinWaitTimeMin;
+    [SerializeField] private float wanderinWaitTimeMax;
 
-    [SerializeField]
-    private float wanderRingDistanceMin;
+    [SerializeField] private Animator EnemyAnim;
 
-    [SerializeField]
-    private float wanderRingDistanceMax;
-
-    // Start is called before the first frame update
     void Start()
     {
-        enemy = GetComponent<NavMeshAgent>();
+
+        EnemyAnim = GetComponent<Animator>();
+        Orc = GetComponent<NavMeshAgent>();
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(player.position,transform.position) < lookRadius)
+        if(Vector3.Distance(transform.position,player.position) < lookRadius)
         {
-            enemy.SetDestination(player.position);
+            Orc.SetDestination(player.position);
+
         }
         else
         {
-
+            if(Orc.remainingDistance < 0.75f && !hasDestination)
+            {
+                StartCoroutine(GetNewDestination());
+            }
         }
+        EnemyAnim.SetFloat("Speed", Orc.velocity.magnitude);
     }
 
     IEnumerator GetNewDestination()
     {
-        destination = true;
-        yield return new WaitForSeconds(Random.Range(wanderRingWaitTimeMin, wanderRingWaitTimeMax));
+        hasDestination = true;
+        yield return new WaitForSeconds(Random.Range(wanderinWaitTimeMin, wanderinWaitTimeMax));
 
-        Vector3 nextDestination = player.position;
-        nextDestination += new Vector3(Random.Range(wanderRingDistanceMin, wanderRingDistanceMax), 0f, Random.Range(-1f, 1)).normalized;
+        Vector3 nextDestination = transform.position;
+        nextDestination += Random.Range(wanderinWaitTimeMin,wanderinWaitTimeMax) * new Vector3(Random.Range(-1f, 1), 0f, Random.Range(-1f, 1f)).normalized;
 
         NavMeshHit hit;
-        if(NavMesh.SamplePosition(nextDestination,out hit,wanderRingDistanceMax,NavMesh.AllAreas))
+        if (NavMesh.SamplePosition(nextDestination,out hit,wanderinWaitTimeMax,NavMesh.AllAreas))
         {
-            enemy.SetDestination(hit.position);
+            Orc.SetDestination(hit.position);
         }
-        destination = false;
+        hasDestination = false;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawSphere(transform.position, lookRadius);
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
+
+
     }
 }

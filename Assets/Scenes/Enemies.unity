@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 363789524}
   - component: {fileID: 363789526}
   - component: {fileID: 363789525}
+  - component: {fileID: 363789528}
+  - component: {fileID: 363789527}
   m_Layer: 0
   m_Name: Dragons
   m_TagString: Untagged
@@ -150,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 363789523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.14, y: -0.31, z: 0}
+  m_LocalPosition: {x: -4.32, y: -0.31, z: 0}
   m_LocalScale: {x: 4.0638514, y: 3.9116485, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -229,6 +231,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &363789527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363789523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06c2635755e31542b8bfe8501d3f60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Orc: {fileID: 0}
+  lookRadius: 10
+  walk: 0
+  Chase: 0
+  wanderinWaitTimeMin: 0
+  wanderinWaitTimeMax: 0
+  EnemyAnim: {fileID: 0}
+--- !u!65 &363789528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363789523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.12, y: 2.56, z: 0.2}
+  m_Center: {x: 0.000000035390258, y: 0, z: 0}
 --- !u!1 &442013779
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +282,8 @@ GameObject:
   m_Component:
   - component: {fileID: 442013780}
   - component: {fileID: 442013781}
+  - component: {fileID: 442013782}
+  - component: {fileID: 442013783}
   m_Layer: 0
   m_Name: orc-concept
   m_TagString: Untagged
@@ -313,6 +358,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &442013782
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442013779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: daeada2b5f6789f43bea7b19a07d2277, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &442013783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442013779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06c2635755e31542b8bfe8501d3f60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Orc: {fileID: 0}
+  lookRadius: 10
+  walk: 0
+  Chase: 0
+  wanderinWaitTimeMin: 0
+  wanderinWaitTimeMax: 0
+  EnemyAnim: {fileID: 0}
 --- !u!1 &641788875
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,8 +586,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509647305}
+  - component: {fileID: 1509647307}
+  - component: {fileID: 1509647308}
   m_Layer: 0
-  m_Name: Orcs
+  m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,13 +604,47 @@ Transform:
   m_GameObject: {fileID: 1509647304}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.28, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 442013780}
   m_Father: {fileID: 641788876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509647307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509647304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 11400000, guid: 5d667ed92bf0ad243b97decb81d0322d, type: 2}
+--- !u!95 &1509647308
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509647304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e6a45972ca508d4cad4410c72333930, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
