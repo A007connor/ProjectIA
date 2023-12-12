@@ -24,13 +24,13 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Layer -1
+  - Layer 0
   - Layer 1
   - Layer 2
   - Layer 3
-  - 
-  - 
-  - 
+  - Layer 4
+  - Layer 5
   - 
   - 
   - 
@@ -41,12 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Layer 1
+  - name: Layer -1
     uniqueID: 2425651459
     locked: 0
-  - name: Layer 2
+  - name: Layer 0
     uniqueID: 4250941897
     locked: 0
-  - name: Layer 3
+  - name: Layer 1
     uniqueID: 4189426099
+    locked: 0
+  - name: Layer 2
+    uniqueID: 1851182001
+    locked: 0
+  - name: Layer 3
+    uniqueID: 3305941681
+    locked: 0
+  - name: Layer 4
+    uniqueID: 3273186669
+    locked: 0
+  - name: Layer 5
+    uniqueID: 2089488641
     locked: 0
