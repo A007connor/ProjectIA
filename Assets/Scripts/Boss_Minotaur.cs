@@ -5,7 +5,6 @@ using UnityEngine;
 public class Boss_Minotaur : MonoBehaviour
 {
     [SerializeField] LayerMask wallLayer;
-    [SerializeField] LayerMask playerLayer;
     [SerializeField] int maxhp = 8;
     [SerializeField] int currentHp;
     [SerializeField] StateManager currentState;
