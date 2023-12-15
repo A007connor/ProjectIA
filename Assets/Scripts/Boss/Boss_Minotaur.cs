@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss_Minotaur : MonoBehaviour
 {
@@ -58,6 +59,8 @@ public class Boss_Minotaur : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("Boss2test");
+
     }
     void ChangeState()
     {
