@@ -6,18 +6,22 @@ public class DataEnemies : MonoBehaviour
 {
     [SerializeField] bool inRange;
     [SerializeField] float range;
-    [SerializeField] Transform playerTransfom;
+    public GameObject _player;
     [SerializeField] float distance;
     [SerializeField] float speed;
+    Vector3 _destination;
+    public Vector3 target;
     // Update is called once per frame
     void Update()
     {
-        checkDistance();
+        //checkDistance();
+        transform.position = Vector3.MoveTowards(transform.position, getDestination(), speed * Time.deltaTime);
     }
 
-    void checkDistance()
+    public void checkDistance()
     {
-        distance = Vector2.Distance(transform.position, playerTransfom.position);
+        Debug.Log(_player);
+        distance = Vector2.Distance(transform.position, _player.transform.position);
         if (distance < range)
         {
             inRange = true;
@@ -27,8 +31,14 @@ public class DataEnemies : MonoBehaviour
             inRange = false;
         }
     }
-
+    public void setPlayer(GameObject player) { _player = player; }
+    public GameObject getPlayer() { return _player;}
+    public Vector3 getTarget() { return target;}
+    public void setDestination(Vector3 destination) { _destination = destination; }
+    public Vector3 getDestination() { return _destination; }
     public bool getInRange() { return inRange; }
     public float getDistance() { return distance; }
     public float getSpeed() { return speed; }
+    public Vector3 getPlayerPosition() { return _player.transform.position;}
+    public Vector3 getCurrentPosition() { return this.transform.position; }
 }
