@@ -20,6 +20,9 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
+        isPaused = false;
+        settingsMenu.SetActive(false);
+
         resolutions = Screen.resolutions;
 
         resolutionsDropdown.ClearOptions();
