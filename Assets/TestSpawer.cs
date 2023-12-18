@@ -1,35 +1,39 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public class TestSpawer : MonoBehaviour
 {
     public SaveSystem saveSystem;
 
-    public bool boss1Killed;
-    public bool boss2Killed;
-    public bool boss3Killed;
+    public GameObject prefab;
 
-
-    public List<bool> killedBoss = new List<bool>();
+    public List<GameObject> createdPrefabs = new List<GameObject>();
 
     public void Clear()
     {
-
-        killedBoss.Clear();
+        foreach (var item in createdPrefabs)
+        {
+            Destroy(item);
+        }
+        createdPrefabs.Clear();
     }
 
-    public void Initialize()
+    public void SpawnPrefab()
     {
-        killedBoss.Add(false);
+        var position = Random.insideUnitCircle * 5;
+        createdPrefabs.Add(Instantiate(prefab, position, Quaternion.identity));
     }
 
     public void SaveGame()
     {
         SaveData data = new SaveData();
-        for(int i = 0; i < killedBoss.Count; i++)
+        foreach (var item in createdPrefabs)
         {
-            data.Add(killedBoss[i]);
+            data.Add(item.transform.position);
         }
         var dataToSave = JsonUtility.ToJson(data);
         saveSystem.SaveData(dataToSave);
@@ -44,10 +48,9 @@ public class TestSpawer : MonoBehaviour
         if (String.IsNullOrEmpty(dataToLoad)==false)
         {
             SaveData data = JsonUtility.FromJson<SaveData>(dataToLoad);
-            for (int i = 0;i < data.bossData.Count; i++)
+            foreach (var positionData in data.positionData)
             {
-                var bossStatue = data.bossData[i];
-                killedBoss.Add(bossStatue);
+                createdPrefabs.Add(Instantiate(prefab, positionData.GetValue(), Quaternion.identity));
             }
         }
     }
@@ -55,29 +58,34 @@ public class TestSpawer : MonoBehaviour
     [Serializable]
     public class SaveData
     {
-        public List<bool> bossData;
+        public List<Vector3Serialization> positionData;
 
         public SaveData()
         {
-            bossData = new List<bool>();
+            positionData = new List<Vector3Serialization>();
         }
 
-        public void Add(bool bossStatue)
+        public void Add(Vector3 position)
         {
-            bossData.Add(bossStatue);
+            positionData.Add(new Vector3Serialization(position));
         }
     }
 
     [Serializable]
-    public class BossData
+    public class Vector3Serialization
     {
         public float x, y, z;
-        public bool bossStatue;
 
-        public BossData (bool bossStatue)
+        public Vector3Serialization(Vector3 position)
         {
-            this.bossStatue = bossStatue;
+            this.x = position.x;
+            this.y = position.y;
+            this.z = position.z;
         }
-  
+
+        public Vector3 GetValue()
+        {
+            return new Vector3(x, y, z);
+        }
     }
 }
