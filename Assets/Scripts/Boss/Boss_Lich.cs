@@ -13,10 +13,15 @@ public class Boss_Lich : MonoBehaviour
     [SerializeField] LayerMask invocationLayer;
     [SerializeField] float maxHp;
     [SerializeField] float currentHp;
+    [SerializeField] List<Transform> enemySpawners;
+    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject player;
+    [SerializeField] DataEnemies enemies;
     void Start()
     {
         currentCouldown = maxCouldown;
         currentHp = maxHp;
+        
     }
 
     private void Update()
@@ -24,7 +29,7 @@ public class Boss_Lich : MonoBehaviour
         ChangeState();
         if (currentState.GetState() is AttackState)
         {
-
+            SpawnEnemies();
         }
         if(currentHp <= 0) Death();
     }
@@ -40,20 +45,31 @@ public class Boss_Lich : MonoBehaviour
 
     void ChangeState()
     {
-        if (currentCouldown == maxCouldown)
-        {
-            currentCouldown = 0;
-            currentState.SwitchNextState(attackState);
-        }
         if (currentCouldown != maxCouldown)
         {
-            currentCouldown++;
+            currentCouldown += 1 * Time.deltaTime;
             currentState.SwitchNextState(idleState);
         }
+        if (currentCouldown >= maxCouldown)
+        {
+            currentState.SwitchNextState(attackState);
+            currentCouldown = 0;
+        }
+        
     }
 
     void Death()
     {
         Destroy(gameObject);
+    }
+    void SpawnEnemies()
+    {
+        foreach(Transform spawner in enemySpawners)
+        {
+            Instantiate(enemyPrefab, spawner.position, spawner.rotation);
+            enemies.setPlayer(player);
+            enemies.checkDistance();
+            Debug.Log(enemies.getPlayer());
+        }
     }
 }
