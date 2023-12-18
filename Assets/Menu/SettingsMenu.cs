@@ -10,8 +10,7 @@ using UnityEngine.PlayerLoop;
 public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsMenu;
-    private static SettingsMenu instance;
-    public bool isPaused;
+    public static bool isPaused;
 
     public AudioMixer audioMixer;
 
@@ -19,15 +18,8 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    private void Awake()
-    {
-        instance = this; 
-    }
-
     private void Start()
     {
-        settingsMenu.SetActive(false);
-
         resolutions = Screen.resolutions;
 
         resolutionsDropdown.ClearOptions();
@@ -50,7 +42,24 @@ public class SettingsMenu : MonoBehaviour
         resolutionsDropdown.value = currentResolutionIndex;
         resolutionsDropdown.RefreshShownValue();
     }
-  
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (isPaused)
+            {
+                Debug.Log("Trytounpause");
+                ResumeGame();
+            }
+            else if (!isPaused)
+            {
+                Debug.Log("Trytopause");
+                PauseGame();
+            }
+        }
+    }
+
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
@@ -66,7 +75,7 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullScreen;
     }
-/*
+
     public void PauseGame()
     {
         settingsMenu.SetActive(true);
@@ -76,10 +85,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void ResumeGame() 
     {
-        settingsMenu?.SetActive(false);
+        settingsMenu.SetActive(false);
         Time.timeScale = 1.0f;
         isPaused = false;
-    }*/
+    }
 
     public void ToggleMenu(bool isActive)
     {

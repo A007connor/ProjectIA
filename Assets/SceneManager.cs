@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    public static bool isGamePaused = false;
+/*    public static bool isGamePaused = false;
     public SettingsMenu settingsMenu;
 
     private void Update()
@@ -28,5 +28,5 @@ public class SceneManager : MonoBehaviour
             settingsMenu.ToggleMenu(isGamePaused);
         }
         Time.timeScale = isGamePaused ? 0 : 1;
-    }
+    }*/
 }
