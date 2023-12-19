@@ -73,6 +73,7 @@ public class Boss_Lich : MonoBehaviour
         {
             Instantiate(enemyPrefab, spawner.position, spawner.rotation);
             enemies.setPlayer(player);
+            enemies.setSpawn( spawner);
         }
     }
 }

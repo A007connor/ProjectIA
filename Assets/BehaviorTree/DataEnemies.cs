@@ -7,6 +7,7 @@ public class DataEnemies : MonoBehaviour
     [SerializeField] bool inRange;
     [SerializeField] float range;
     public GameObject _player;
+    public Transform _spawn;
     [SerializeField] float distance;
     [SerializeField] float speed;
     Vector3 _destination;
@@ -31,6 +32,7 @@ public class DataEnemies : MonoBehaviour
             inRange = false;
         }
     }
+    public void setSpawn(Transform spawn) { _spawn = spawn; }
     public void setPlayer(GameObject player) { _player = player; }
     public Vector3 getTarget() { return target;}
     public void setDestination(Vector3 destination) { _destination = destination; }
