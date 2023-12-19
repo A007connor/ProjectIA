@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Bits: 512
   lichLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
 --- !u!1 &6906948841574596540
 GameObject:
   m_ObjectHideFlags: 0

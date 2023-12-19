@@ -46,11 +46,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[6]
-    value: 
+    value: Invocation
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[7]
-    value: 
+    value: Lich
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[8]
@@ -58,7 +58,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[9]
-    value: 
+    value: Wall
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[10]
@@ -98,39 +98,39 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[19]
-    value: Layer -1
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[20]
-    value: Layer 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: layers.Array.data[21]
     value: Layer 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[22]
+    propertyPath: layers.Array.data[21]
     value: Layer 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[23]
+    propertyPath: layers.Array.data[22]
     value: Layer 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[24]
+    propertyPath: layers.Array.data[23]
     value: Layer 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[25]
+    propertyPath: layers.Array.data[24]
     value: Layer 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[26]
+    propertyPath: layers.Array.data[25]
     value: Layer 6
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: layers.Array.data[27]
+    propertyPath: layers.Array.data[26]
     value: Layer 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: layers.Array.data[27]
+    value: Layer 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[28]
@@ -150,7 +150,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.size
-    value: 10
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[0].name
@@ -166,11 +166,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[1].name
-    value: Layer -1
+    value: Layer 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[1].uniqueID
-    value: 2425651459
+    value: 4189426099
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[1].locked
@@ -178,11 +178,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[2].name
-    value: Layer 0
+    value: Layer 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[2].uniqueID
-    value: 4250941897
+    value: 1851182001
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[2].locked
@@ -190,11 +190,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[3].name
-    value: Layer 1
+    value: Layer 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[3].uniqueID
-    value: 4189426099
+    value: 3305941681
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[3].locked
@@ -202,11 +202,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[4].name
-    value: Layer 2
+    value: Layer 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[4].uniqueID
-    value: 1851182001
+    value: 3273186669
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[4].locked
@@ -214,11 +214,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[5].name
-    value: Layer 3
+    value: Layer 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[5].uniqueID
-    value: 3305941681
+    value: 2089488641
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[5].locked
@@ -226,11 +226,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[6].name
-    value: Layer 4
+    value: Layer 6
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[6].uniqueID
-    value: 3273186669
+    value: 2193851527
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[6].locked
@@ -238,38 +238,14 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_SortingLayers.Array.data[7].name
-    value: Layer 5
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[7].uniqueID
-    value: 2089488641
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[7].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[8].name
-    value: Layer 6
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[8].uniqueID
-    value: 2193851527
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[8].locked
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[9].name
     value: Layer 7
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[9].uniqueID
+    propertyPath: m_SortingLayers.Array.data[7].uniqueID
     value: 4279873325
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_SortingLayers.Array.data[9].locked
+    propertyPath: m_SortingLayers.Array.data[7].locked
     value: 0
     objectReference: {fileID: 0}
   m_ExcludedProperties: []
