@@ -3,87 +3,53 @@ using System.Collections.Generic;
 using TheKiwiCoder;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.GraphicsBuffer;
+
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Transform player;
+    [SerializeField] private float attack;
+    [SerializeField] private float range;
+    [SerializeField] private float colliderDistance;
+    [SerializeField] private int damage;
+    private Animator enemyAnim;
+
+    private EnemyPatrol enemyPatrol;
 
     [SerializeField]
-    public GameObject fireBall;
+    private BoxCollider2D boxCollider;
 
     [SerializeField]
-    public Transform fire;
+    private LayerMask playerLayer;
 
-    [SerializeField]
-    private NavMeshAgent enemy;
+    private float cooldownTimer = Mathf.Infinity;
 
-    [SerializeField]
-    private Rigidbody2D rb;
-
-    [SerializeField]
-    private float lookRadius;
-
-    [SerializeField]
-    private float walkSpeed;
-
-    [SerializeField]
-    private Animator EnemyAnim;
-
-    public float attackRange = 2.2f;
-
-    public float attackRepeat = 1;
-    private float attackTime = 2;
-
-    private bool hasDestination;
-
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        EnemyAnim = GetComponent<Animator>();
-        enemy = GetComponent<NavMeshAgent>();
-
+        enemyAnim = GetComponent<Animator>();
+        enemyPatrol = GetComponentInParent<EnemyPatrol>();
     }
 
-    void Update(float v)
+    private void Update()
     {
-        float distanceTarget = Vector2.Distance(transform.position, player.transform.position);
-
-        if (distanceTarget < walkSpeed && distanceTarget > attackRange)
+        cooldownTimer = Time.time;
+        if(PlayerInSight())
         {
-            Chase();
+            if(cooldownTimer >= attack)
+            {
+                cooldownTimer = 0;
+                enemyAnim.SetTrigger("Attack");
+            }
         }
-        if (distanceTarget < attackRange)
+        if(enemyPatrol != null)
         {
-            attack();
-
+            enemyPatrol.enabled = !PlayerInSight();
         }
     }
-
-    void Chase()
+    private bool PlayerInSight()
     {
-        EnemyAnim.SetBool("Walking", true);
-        enemy.destination = Target.position;
-    }
-
-    void attack()
-    {
-        enemy.destination = Target.position;
-
-        if (Time.time > attackTime)
-        {
-            EnemyAnim.SetBool("Attack", true);
-            //playerHealth.playerHurt(10);
-            attackTime = Time.time + attackRepeat;
-            Instantiate(fireBall, fire.position, Quaternion.identity);
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
-
-    }
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right* range * transform.localScale.x,
+            new Vector3( boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z )
+            ,0, Vector2.left, 0, playerLayer);
+        return hit.collider != null;
+    }   
 }
