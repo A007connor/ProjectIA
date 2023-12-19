@@ -11,10 +11,12 @@ TagManager:
   - 
   - Water
   - UI
+  - Invocation
+  - wall
+  - Lich
   - Player
   - 
   - 
-  - wall
   - 
   - 
   - 
@@ -25,14 +27,12 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
-  - Layer 4
-  - Layer 5
-  - Layer 6
-  - Layer 7
-  - Layer 8
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -40,25 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Layer 1
-    uniqueID: 4189426099
-    locked: 0
-  - name: Layer 2
-    uniqueID: 1851182001
-    locked: 0
-  - name: Layer 3
-    uniqueID: 3305941681
-    locked: 0
-  - name: Layer 4
-    uniqueID: 3273186669
-    locked: 0
-  - name: Layer 5
-    uniqueID: 2089488641
-    locked: 0
-  - name: Layer 6
-    uniqueID: 2193851527
-    locked: 0
-  - name: Layer 7
-    uniqueID: 4279873325
     locked: 0

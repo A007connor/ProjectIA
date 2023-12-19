@@ -9,6 +9,8 @@ public class RandomPosition : ActionNode
     public Vector2 max = Vector2.one * 10;
 
     protected override void OnStart() {
+        blackboard.moveToPosition.x = Random.Range(min.x, max.x);
+        blackboard.moveToPosition.z = Random.Range(min.y, max.y);
     }
 
     protected override void OnStop() {
@@ -17,6 +19,7 @@ public class RandomPosition : ActionNode
     protected override State OnUpdate() {
         blackboard.moveToPosition.x = Random.Range(min.x, max.x);
         blackboard.moveToPosition.z = Random.Range(min.y, max.y);
+        
         return State.Success;
     }
 }
