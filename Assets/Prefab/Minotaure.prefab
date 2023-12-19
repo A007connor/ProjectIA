@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 2764137232773178037}
   - component: {fileID: 34685983403208844}
   m_Layer: 0
-  m_Name: Boss1
+  m_Name: Minotaure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,9 +229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  playerLayer:
     serializedVersion: 2
     m_Bits: 0
   maxhp: 8
