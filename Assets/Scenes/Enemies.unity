@@ -190,8 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &268334055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -256,9 +254,6 @@ GameObject:
   - component: {fileID: 363789526}
   - component: {fileID: 363789525}
   - component: {fileID: 363789529}
-  - component: {fileID: 363789530}
-  - component: {fileID: 363789531}
-  - component: {fileID: 363789532}
   m_Layer: 0
   m_Name: Dragons
   m_TagString: Enemy
@@ -401,76 +396,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &363789530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363789523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2bf15530b00694faee66949e92d599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 1
-  range: 2
-  colliderDistance: 5
-  damage: 3
-  boxCollider: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &363789531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363789523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1fc98064f4b4df43a0c157defcbe99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  left: {fileID: 650742385}
-  right: {fileID: 1174600290}
-  speed: 0
-  enemy: {fileID: 363789524}
-  initScale: {x: 0, y: 0, z: 0}
-  idleDuration: 0
-  EnemyAnim: {fileID: 0}
---- !u!114 &363789532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363789523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b72803fed2dcb04e9efada14bbf266f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 2
-  range: 2
-  damage: 5
-  firePoint: {fileID: 917060689}
-  fireBalls:
-  - {fileID: 1261601826}
-  - {fileID: 393903680}
-  - {fileID: 404267120}
-  - {fileID: 841345309}
-  - {fileID: 1789286799}
-  - {fileID: 1185495187}
-  - {fileID: 268334051}
-  - {fileID: 1387807460}
-  - {fileID: 1338517249}
-  colliderDistance: 0
-  boxCollider: {fileID: 0}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &393903680
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,8 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &393903684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -659,8 +582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &404267124
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -837,7 +758,6 @@ MonoBehaviour:
   lookRadius: 10
   walk: 0
   Chase: 0
-  hasDestination: 0
   wanderinWaitTimeMin: 0
   wanderinWaitTimeMax: 0
   EnemyAnim: {fileID: 0}
@@ -851,7 +771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 641788876}
   - component: {fileID: 641788877}
-  - component: {fileID: 641788878}
   m_Layer: 0
   m_Name: Ennemies
   m_TagString: Untagged
@@ -928,18 +847,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &641788878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641788875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b46759f05a08c489f54f2370056067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &650742384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,8 +945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &841345313
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1367,8 +1272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &1185495191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1488,8 +1391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &1261601830
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1609,8 +1510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &1338517253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1730,8 +1629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &1387807464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1919,8 +1816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a810d940d54dfac48b11fcf19b53fdbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  resetTime: 5
 --- !u!212 &1789286803
 SpriteRenderer:
   m_ObjectHideFlags: 0

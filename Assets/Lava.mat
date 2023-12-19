@@ -94,10 +94,10 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HightLightsSpread: 2.5
+    - _HightLightsSpread: 5
     - _Metallic: 0
     - _Mode: 0
-    - _MovementSpeed: 0.5
+    - _MovementSpeed: 1.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueControl: 0

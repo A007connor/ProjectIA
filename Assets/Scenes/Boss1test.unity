@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &174479291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5067731664754012602, guid: 7340b8451a3874b44a2951c73626bd85,
+    type: 3}
+  m_PrefabInstance: {fileID: 202392378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &202392378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,7 +212,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8575311613226532699, guid: 7340b8451a3874b44a2951c73626bd85,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7273915134811214726, guid: 7340b8451a3874b44a2951c73626bd85, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -223,7 +235,7 @@ GameObject:
   - component: {fileID: 289531369}
   - component: {fileID: 289531368}
   - component: {fileID: 289531370}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4980,7 +4992,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4645622939257656468
+--- !u!1001 &1543044271
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5041,13 +5053,13 @@ PrefabInstance:
     - target: {fileID: 6525951062214251406, guid: 0ac0abf559bf5ae40b2010240c4fb29e,
         type: 3}
       propertyPath: m_Name
-      value: Boss1
+      value: Minotaure
       objectReference: {fileID: 0}
     - target: {fileID: 7470705910898485308, guid: 0ac0abf559bf5ae40b2010240c4fb29e,
         type: 3}
       propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 174479291}
     - target: {fileID: 7470705910898485308, guid: 0ac0abf559bf5ae40b2010240c4fb29e,
         type: 3}
       propertyPath: wallLayer.m_Bits
@@ -5063,6 +5075,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1337777600}
-  - {fileID: 4645622939257656468}
   - {fileID: 502626174}
   - {fileID: 202392378}
+  - {fileID: 1543044271}
