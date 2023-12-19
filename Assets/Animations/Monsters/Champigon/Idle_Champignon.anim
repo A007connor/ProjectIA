@@ -27,7 +27,7 @@ AnimationClip:
     - time: 0.35
       value: {fileID: 1188406888, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
     - time: 0.51666665
-      value: {fileID: 778129466, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
+      value: {fileID: 472494554, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -53,13 +53,13 @@ AnimationClip:
     - {fileID: 1188406888, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
     - {fileID: -1395196481, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
     - {fileID: 1188406888, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
-    - {fileID: 778129466, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
+    - {fileID: 472494554, guid: e251482b7470b4f45a8a67bd62c75fb8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666667
+    m_StopTime: 0.5333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,53 +78,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.33333334
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6666667
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
