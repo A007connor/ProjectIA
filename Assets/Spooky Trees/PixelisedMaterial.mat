@@ -75,11 +75,11 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PixelSize: 150
-    - _PixelationAmount: 130
+    - _PixelationAmount: 133
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Threshold: 0.418
+    - _Threshold: 0.469
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
