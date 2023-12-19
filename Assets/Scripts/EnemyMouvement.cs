@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform player;
 
     [SerializeField]
-    public GameObject fireBall;
+    public GameObject fireballPrefab;
 
     [SerializeField]
     public Transform fire;
@@ -35,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
 
     public float attackRepeat = 1;
     private float attackTime = 2;
+    public float damage = 10;
 
     private bool hasDestination;
 
@@ -48,13 +49,13 @@ public class EnemyMovement : MonoBehaviour
 
     void Update(float v)
     {
-        float distanceTarget = Vector2.Distance(transform.position, player.transform.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceTarget < walkSpeed && distanceTarget > attackRange)
+        if (distanceToPlayer < walkSpeed && distanceToPlayer > attackRange)
         {
             Chase();
         }
-        if (distanceTarget < attackRange)
+        if (distanceToPlayer < attackRange)
         {
             attack();
 
@@ -64,20 +65,44 @@ public class EnemyMovement : MonoBehaviour
     void Chase()
     {
         EnemyAnim.SetBool("Walking", true);
-        enemy.destination = Target.position;
+        enemy.destination = player.position;
     }
 
     void attack()
     {
-        enemy.destination = Target.position;
+        enemy.destination = player.position;
 
         if (Time.time > attackTime)
         {
             EnemyAnim.SetBool("Attack", true);
             //playerHealth.playerHurt(10);
             attackTime = Time.time + attackRepeat;
-            Instantiate(fireBall, fire.position, Quaternion.identity);
+            Instantiate(fireballPrefab, fire.position, Quaternion.identity);
         }
+    }
+
+    private void FireBall()
+    {
+        GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
+
+        FireBall fireballScript = fireball.GetComponent<FireBall>();
+        if (fireballScript != null)
+        {
+            // Vous pouvez configurer d'autres propriétés de la boule de feu ici, si nécessaire
+            fireballScript.damage = 30; // Par exemple, définir des dégâts différents pour cette boule de feu
+        }
+
+        // Calculer la direction vers le joueur
+        Vector3 directionToPlayer = (player.position - transform.position).normalized;
+        Rigidbody2D rbFireball = fireball.GetComponent<Rigidbody2D>();
+        rbFireball.AddForce(directionToPlayer * 500f);
+        Destroy(fireball, 3f);
+    }
+
+    void Dead()
+    {
+        EnemyAnim.SetTrigger("isDead");
+        Destroy(gameObject, 1.5f);
     }
 
     private void OnDrawGizmos()
