@@ -14,13 +14,13 @@ public class DataEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checkDistance();
+        checkDistance();
         transform.position = Vector3.MoveTowards(transform.position, getDestination(), speed * Time.deltaTime);
     }
 
-    public void checkDistance()
+     void checkDistance()
     {
-        Debug.Log(_player);
+        
         distance = Vector2.Distance(transform.position, _player.transform.position);
         if (distance < range)
         {
@@ -32,7 +32,6 @@ public class DataEnemies : MonoBehaviour
         }
     }
     public void setPlayer(GameObject player) { _player = player; }
-    public GameObject getPlayer() { return _player;}
     public Vector3 getTarget() { return target;}
     public void setDestination(Vector3 destination) { _destination = destination; }
     public Vector3 getDestination() { return _destination; }

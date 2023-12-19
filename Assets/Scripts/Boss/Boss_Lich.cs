@@ -60,6 +60,7 @@ public class Boss_Lich : MonoBehaviour
 
     void Death()
     {
+        
         Destroy(gameObject);
     }
     void SpawnEnemies()
@@ -68,8 +69,6 @@ public class Boss_Lich : MonoBehaviour
         {
             Instantiate(enemyPrefab, spawner.position, spawner.rotation);
             enemies.setPlayer(player);
-            enemies.checkDistance();
-            Debug.Log(enemies.getPlayer());
         }
     }
 }
