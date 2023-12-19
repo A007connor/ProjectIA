@@ -10,13 +10,13 @@ public class DataEnemies : MonoBehaviour
     public Transform _spawn;
     [SerializeField] float distance;
     [SerializeField] float speed;
+    [SerializeField] float speedChase;
     Vector3 _destination;
     public Vector3 target;
     // Update is called once per frame
     void Update()
     {
         checkDistance();
-        transform.position = Vector3.MoveTowards(transform.position, getDestination(), speed * Time.deltaTime);
     }
 
      void checkDistance()
@@ -25,10 +25,14 @@ public class DataEnemies : MonoBehaviour
         distance = Vector2.Distance(transform.position, _player.transform.position);
         if (distance < range)
         {
+            transform.position = Vector3.MoveTowards(transform.position, getDestination(), speedChase * Time.deltaTime);
+
             inRange = true;
         }
         else
         {
+            transform.position = Vector3.MoveTowards(transform.position, getDestination(), speed * Time.deltaTime);
+
             inRange = false;
         }
     }
