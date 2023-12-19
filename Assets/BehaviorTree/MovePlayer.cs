@@ -19,7 +19,7 @@ public class MovePlayer : ActionNode
 
     protected override State OnUpdate()
     {
-        dataEnemies.target = dataEnemies.getPlayer().transform.position;
+        dataEnemies.target = dataEnemies._player.transform.position;
         dataEnemies.setDestination(dataEnemies.getTarget());
 
         if (!dataEnemies.getInRange())
