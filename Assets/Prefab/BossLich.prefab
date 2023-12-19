@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4122055915618710362}
   - component: {fileID: 8694894121083698534}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6461676325346008669}
   - component: {fileID: 4209365735149450283}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1139283487364273255}
   - component: {fileID: 8395124831525928560}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: dead_lich_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2834926750897975281}
   - component: {fileID: 3752815352748470127}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Chase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3790443111715174768}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: States
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 5507203186920151143}
   - component: {fileID: 1098556066595572566}
   - component: {fileID: 3686953122986677046}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: BossLich
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7733383936593689232}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   currentCouldown: 0
   invocationLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   maxHp: 100
   currentHp: 0
   enemySpawners:
