@@ -64,10 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallLayer:
     serializedVersion: 2
-    m_Bits: 256
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   maxhp: 8
   currentHp: 0
   currentState: {fileID: 2587850660351043199}

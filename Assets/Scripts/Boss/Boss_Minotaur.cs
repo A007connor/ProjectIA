@@ -65,7 +65,6 @@ public class Boss_Minotaur : MonoBehaviour
     void ChangeState()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        Debug.Log(distanceToPlayer);
         if (distanceToPlayer <= 6f) currentState.SwitchNextState(chaseState);
         if (distanceToPlayer <= 4f) currentState.SwitchNextState(attackState);
     }
