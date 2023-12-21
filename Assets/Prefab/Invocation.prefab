@@ -65,8 +65,10 @@ MonoBehaviour:
   inRange: 0
   range: 100
   _player: {fileID: 0}
+  _spawn: {fileID: 0}
   distance: 0
   speed: 2
+  speedChase: 7
   target: {x: 0, y: 0, z: 0}
 --- !u!50 &7378610570219466369
 Rigidbody2D:
@@ -152,12 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ba1c7464de0f345ab469ee73bb17ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
   lichLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 128
 --- !u!1 &6906948841574596540
 GameObject:
   m_ObjectHideFlags: 0
