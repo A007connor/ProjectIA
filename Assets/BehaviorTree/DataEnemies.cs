@@ -13,6 +13,11 @@ public class DataEnemies : MonoBehaviour
     [SerializeField] float speedChase;
     Vector3 _destination;
     public Vector3 target;
+
+    private void Awake()
+    {
+        checkDistance();
+    }
     // Update is called once per frame
     void Update()
     {

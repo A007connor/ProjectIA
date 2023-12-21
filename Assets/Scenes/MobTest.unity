@@ -216,17 +216,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7273915134811214726, guid: 7340b8451a3874b44a2951c73626bd85, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7340b8451a3874b44a2951c73626bd85, type: 3}
---- !u!4 &202392379 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5067731664754012602, guid: 7340b8451a3874b44a2951c73626bd85,
-    type: 3}
-  m_PrefabInstance: {fileID: 202392378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &289531366
 GameObject:
   m_ObjectHideFlags: 0
@@ -10594,6 +10589,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1105487189 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 755170540447849187, guid: 1aa085eaa9122f046b448e9cb5129cdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 9062082155600242640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1167295618
 GameObject:
   m_ObjectHideFlags: 0
@@ -10643,6 +10644,7 @@ GameObject:
   - component: {fileID: 1337777599}
   - component: {fileID: 1337777598}
   - component: {fileID: 1337777601}
+  - component: {fileID: 1337777602}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10738,11 +10740,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _followType: 0
   _updateType: 0
-  _target: {fileID: 202392379}
+  _target: {fileID: 1105487189}
   _minDistance: 0.1
   _speed: 2
   _smoothTime: 0.5
   _maxSpeed: 10
+--- !u!114 &1337777602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337777597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &9062082155600242640
 PrefabInstance:
   m_ObjectHideFlags: 0

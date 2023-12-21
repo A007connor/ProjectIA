@@ -39,6 +39,14 @@ public class FlyingEye : MonoBehaviour
             
             GameObject newProjectiles = Instantiate(projectiles, this.transform.position, this.transform.rotation);
             currentCouldown = 0;
+            Vector3 directionToPlayer = (enemies._player.transform.position - transform.position).normalized;
+
+            // Passer la direction au projectile
+            EyeProjectiles eyeProj = newProjectiles.GetComponent<EyeProjectiles>();
+            if (eyeProj != null)
+            {
+                eyeProj.setTargetPosition(directionToPlayer);
+            }
         }
     }
 }
