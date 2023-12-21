@@ -147,7 +147,7 @@ TextureImporter:
       213: -8368778483476966252
     second: Player_Roll_47
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -164,11 +164,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -207,6 +208,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -218,6 +221,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -230,6 +234,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -242,6 +247,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -254,6 +260,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1278,57 +1298,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Roll_35: -2395313490192049622
-      Player_Roll_12: 789377589745040229
-      Player_Roll_36: 5471179899597575336
-      Player_Roll_26: -2417047579968577932
-      Player_Roll_40: 2793157292445447307
-      Player_Roll_30: 346414387574328448
-      Player_Roll_4: -4362454536461382906
-      Player_Roll_6: -1687535856415035108
-      Player_Roll_45: 4926884089832043864
-      Player_Roll_8: 8813565459497090075
-      Player_Roll_15: -651610718245119128
       Player_Roll_0: -462999659910306037
+      Player_Roll_1: 6385356526697221979
       Player_Roll_10: 2675550996037021787
       Player_Roll_11: 4519795500663888298
-      Player_Roll_41: -9202707243294625158
+      Player_Roll_12: 789377589745040229
+      Player_Roll_13: -8016809641256567503
+      Player_Roll_14: -8198143104457415699
+      Player_Roll_15: -651610718245119128
+      Player_Roll_16: 7454608071559370437
+      Player_Roll_17: -1615294753402876116
+      Player_Roll_18: -8456666145933181701
+      Player_Roll_19: -6728971274189596398
+      Player_Roll_2: 3703259466282617875
+      Player_Roll_20: -4858991538223402151
+      Player_Roll_21: -7962010207520237466
+      Player_Roll_22: 8241158161890022627
+      Player_Roll_23: 7671710979317649249
+      Player_Roll_24: 1239584201120777267
+      Player_Roll_25: -1373102559264071938
+      Player_Roll_26: -2417047579968577932
       Player_Roll_27: -4699108874731704248
       Player_Roll_28: 3408269098211650433
-      Player_Roll_19: -6728971274189596398
-      Player_Roll_7: 9079239055874304725
-      Player_Roll_31: 4897203564289737436
       Player_Roll_29: -8034875566596637460
-      Player_Roll_21: -7962010207520237466
-      Player_Roll_23: 7671710979317649249
-      Player_Roll_22: 8241158161890022627
-      Player_Roll_34: 7400873926541422490
-      Player_Roll_32: -2922172386439567061
-      Player_Roll_16: 7454608071559370437
-      Player_Roll_33: 4550022428458476853
-      Player_Roll_47: -8368778483476966252
-      Player_Roll_44: -955774622038724532
-      Player_Roll_17: -1615294753402876116
-      Player_Roll_42: 744742953562915497
-      Player_Roll_14: -8198143104457415699
-      Player_Roll_43: 4992448732009335166
-      Player_Roll_38: -4362665001069240596
-      Player_Roll_5: 6353303952965744977
-      Player_Roll_37: -6689988364789093850
-      Player_Roll_1: 6385356526697221979
-      Player_Roll_25: -1373102559264071938
-      Player_Roll_46: -1974727010721228885
-      Player_Roll_39: -8915571287384406639
-      Player_Roll_13: -8016809641256567503
-      Player_Roll_20: -4858991538223402151
-      Player_Roll_24: 1239584201120777267
-      Player_Roll_2: 3703259466282617875
-      Player_Roll_18: -8456666145933181701
       Player_Roll_3: 2728975346641338092
+      Player_Roll_30: 346414387574328448
+      Player_Roll_31: 4897203564289737436
+      Player_Roll_32: -2922172386439567061
+      Player_Roll_33: 4550022428458476853
+      Player_Roll_34: 7400873926541422490
+      Player_Roll_35: -2395313490192049622
+      Player_Roll_36: 5471179899597575336
+      Player_Roll_37: -6689988364789093850
+      Player_Roll_38: -4362665001069240596
+      Player_Roll_39: -8915571287384406639
+      Player_Roll_4: -4362454536461382906
+      Player_Roll_40: 2793157292445447307
+      Player_Roll_41: -9202707243294625158
+      Player_Roll_42: 744742953562915497
+      Player_Roll_43: 4992448732009335166
+      Player_Roll_44: -955774622038724532
+      Player_Roll_45: 4926884089832043864
+      Player_Roll_46: -1974727010721228885
+      Player_Roll_47: -8368778483476966252
+      Player_Roll_5: 6353303952965744977
+      Player_Roll_6: -1687535856415035108
+      Player_Roll_7: 9079239055874304725
+      Player_Roll_8: 8813565459497090075
       Player_Roll_9: 3627354849991223643
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

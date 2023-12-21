@@ -147,7 +147,7 @@ TextureImporter:
       213: 25733027805979318
     second: Player_Sprint_47
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -164,11 +164,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -207,6 +208,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -218,6 +221,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -230,6 +234,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -242,6 +247,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -254,6 +260,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1278,57 +1298,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Sprint_39: 6464929823909034150
-      Player_Sprint_12: 2160654461584020618
-      Player_Sprint_37: 5411422949877003388
-      Player_Sprint_47: 25733027805979318
-      Player_Sprint_6: 1362924176826149678
-      Player_Sprint_32: 675712178480944278
-      Player_Sprint_22: 1685956545931309228
-      Player_Sprint_30: -505961714112257268
-      Player_Sprint_25: 7690018710552143216
-      Player_Sprint_1: 4610384396487506991
-      Player_Sprint_28: -6983012377239191069
-      Player_Sprint_34: 4712927115372064807
-      Player_Sprint_20: -1495355143958142464
-      Player_Sprint_11: -6592271377104740781
-      Player_Sprint_46: 4194522363393633564
-      Player_Sprint_18: 1765679994788605992
-      Player_Sprint_38: -4031157005168743074
-      Player_Sprint_7: -5301439031170446245
-      Player_Sprint_29: -1418533110960870924
-      Player_Sprint_40: -3153649659106261747
-      Player_Sprint_35: -7594636069093382373
-      Player_Sprint_4: -1967109811477551092
-      Player_Sprint_2: 2700240590458931050
-      Player_Sprint_8: -6811474306721145392
-      Player_Sprint_27: -708112613701742829
-      Player_Sprint_44: -3158549113177706644
       Player_Sprint_0: -635660619222873508
+      Player_Sprint_1: 4610384396487506991
       Player_Sprint_10: 5936812225044499309
-      Player_Sprint_24: -6504056042939048788
-      Player_Sprint_23: -6047572282555878500
-      Player_Sprint_33: 823524230842221247
-      Player_Sprint_5: 9059384579744580667
+      Player_Sprint_11: -6592271377104740781
+      Player_Sprint_12: 2160654461584020618
+      Player_Sprint_13: -6857121733103058163
       Player_Sprint_14: 2273763925953238556
-      Player_Sprint_43: 8770966590756598642
+      Player_Sprint_15: 395780940734096156
+      Player_Sprint_16: -3418857469071530916
+      Player_Sprint_17: 858417916681358712
+      Player_Sprint_18: 1765679994788605992
       Player_Sprint_19: 1433080551474888980
+      Player_Sprint_2: 2700240590458931050
+      Player_Sprint_20: -1495355143958142464
       Player_Sprint_21: 7627502157075920222
+      Player_Sprint_22: 1685956545931309228
+      Player_Sprint_23: -6047572282555878500
+      Player_Sprint_24: -6504056042939048788
+      Player_Sprint_25: 7690018710552143216
+      Player_Sprint_26: 3890963959263736720
+      Player_Sprint_27: -708112613701742829
+      Player_Sprint_28: -6983012377239191069
+      Player_Sprint_29: -1418533110960870924
       Player_Sprint_3: 9212701133725422354
+      Player_Sprint_30: -505961714112257268
+      Player_Sprint_31: 9033059872590834224
+      Player_Sprint_32: 675712178480944278
+      Player_Sprint_33: 823524230842221247
+      Player_Sprint_34: 4712927115372064807
+      Player_Sprint_35: -7594636069093382373
+      Player_Sprint_36: -2066911202026942809
+      Player_Sprint_37: 5411422949877003388
+      Player_Sprint_38: -4031157005168743074
+      Player_Sprint_39: 6464929823909034150
+      Player_Sprint_4: -1967109811477551092
+      Player_Sprint_40: -3153649659106261747
       Player_Sprint_41: 2350795818944646266
       Player_Sprint_42: 3612909525794748135
-      Player_Sprint_13: -6857121733103058163
-      Player_Sprint_26: 3890963959263736720
-      Player_Sprint_15: 395780940734096156
-      Player_Sprint_17: 858417916681358712
-      Player_Sprint_9: 2175878915031165623
+      Player_Sprint_43: 8770966590756598642
+      Player_Sprint_44: -3158549113177706644
       Player_Sprint_45: 7444429676970958451
-      Player_Sprint_36: -2066911202026942809
-      Player_Sprint_16: -3418857469071530916
-      Player_Sprint_31: 9033059872590834224
-  spritePackingTag: 
+      Player_Sprint_46: 4194522363393633564
+      Player_Sprint_47: 25733027805979318
+      Player_Sprint_5: 9059384579744580667
+      Player_Sprint_6: 1362924176826149678
+      Player_Sprint_7: -5301439031170446245
+      Player_Sprint_8: -6811474306721145392
+      Player_Sprint_9: 2175878915031165623
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

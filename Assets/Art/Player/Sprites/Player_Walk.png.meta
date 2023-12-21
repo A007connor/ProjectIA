@@ -147,7 +147,7 @@ TextureImporter:
       213: 7766651420155466090
     second: Player_Run_47
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -164,11 +164,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -207,6 +208,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -218,6 +221,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -230,6 +234,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -242,6 +247,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -254,6 +260,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1278,57 +1298,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Run_8: 959529608333098588
-      Player_Run_40: -6969228412077200300
-      Player_Run_44: 2808957483896993807
-      Player_Run_45: -962252863303164234
-      Player_Run_6: -2326533491371090439
-      Player_Run_5: 5743889843950775253
+      Player_Run_0: 7071935623343613943
+      Player_Run_1: 7927430643088319458
+      Player_Run_10: -664291302208399456
+      Player_Run_11: -8780102290416826438
+      Player_Run_12: -8215763814734337333
+      Player_Run_13: -6508036756775967114
       Player_Run_14: -4081966199691286702
       Player_Run_15: 8932565449435414082
-      Player_Run_19: 5723554271508858273
-      Player_Run_35: 7003094025334152224
-      Player_Run_32: -4335104698919916936
-      Player_Run_27: -5433794150726066881
-      Player_Run_18: 5990380963254822675
-      Player_Run_34: -4942748679182735890
-      Player_Run_17: -5575292247015035484
-      Player_Run_20: -8717655225810554653
-      Player_Run_47: 7766651420155466090
-      Player_Run_24: 2299765456210858347
-      Player_Run_43: 7175461292005698805
-      Player_Run_36: -9076256411030300945
-      Player_Run_22: -1874742857581330549
-      Player_Run_46: -8299298573156671977
-      Player_Run_13: -6508036756775967114
-      Player_Run_23: 5323368768666886337
-      Player_Run_31: -5874263889739857933
-      Player_Run_10: -664291302208399456
-      Player_Run_30: -9205402515799210626
-      Player_Run_39: 7119402903829709127
-      Player_Run_21: 5218589151773625626
-      Player_Run_41: -1499607286274690389
-      Player_Run_28: 727875544950430614
-      Player_Run_7: -1732827444613157014
-      Player_Run_25: -7841221538413763245
-      Player_Run_11: -8780102290416826438
-      Player_Run_42: -827347495250578552
-      Player_Run_4: 3041140956625590587
-      Player_Run_37: -6309806480165431028
-      Player_Run_1: 7927430643088319458
-      Player_Run_33: 1236071667636384905
       Player_Run_16: 7450865813858486782
-      Player_Run_12: -8215763814734337333
-      Player_Run_26: 1606529147039237374
-      Player_Run_9: -6458370430407502735
-      Player_Run_29: 2601974218857148657
-      Player_Run_38: -906435870529649911
+      Player_Run_17: -5575292247015035484
+      Player_Run_18: 5990380963254822675
+      Player_Run_19: 5723554271508858273
       Player_Run_2: -1396096166093489214
-      Player_Run_0: 7071935623343613943
+      Player_Run_20: -8717655225810554653
+      Player_Run_21: 5218589151773625626
+      Player_Run_22: -1874742857581330549
+      Player_Run_23: 5323368768666886337
+      Player_Run_24: 2299765456210858347
+      Player_Run_25: -7841221538413763245
+      Player_Run_26: 1606529147039237374
+      Player_Run_27: -5433794150726066881
+      Player_Run_28: 727875544950430614
+      Player_Run_29: 2601974218857148657
       Player_Run_3: 1781292534199600417
-  spritePackingTag: 
+      Player_Run_30: -9205402515799210626
+      Player_Run_31: -5874263889739857933
+      Player_Run_32: -4335104698919916936
+      Player_Run_33: 1236071667636384905
+      Player_Run_34: -4942748679182735890
+      Player_Run_35: 7003094025334152224
+      Player_Run_36: -9076256411030300945
+      Player_Run_37: -6309806480165431028
+      Player_Run_38: -906435870529649911
+      Player_Run_39: 7119402903829709127
+      Player_Run_4: 3041140956625590587
+      Player_Run_40: -6969228412077200300
+      Player_Run_41: -1499607286274690389
+      Player_Run_42: -827347495250578552
+      Player_Run_43: 7175461292005698805
+      Player_Run_44: 2808957483896993807
+      Player_Run_45: -962252863303164234
+      Player_Run_46: -8299298573156671977
+      Player_Run_47: 7766651420155466090
+      Player_Run_5: 5743889843950775253
+      Player_Run_6: -2326533491371090439
+      Player_Run_7: -1732827444613157014
+      Player_Run_8: 959529608333098588
+      Player_Run_9: -6458370430407502735
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
