@@ -8,7 +8,11 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
 =======
   script: {instanceID: 0}
 >>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
+=======
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+>>>>>>> c0d87a0c269a6bd82a687c3cf5bc6f30b07aaea9

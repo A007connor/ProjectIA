@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 264136e481c01cc4c842e8609af02f11
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Decals/PaintSplat/PaintSplat_Graph.shadergraph.meta
+<<<<<<< HEAD
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+=======
+  script: {instanceID: 0}
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
+=======
+>>>>>>> c0d87a0c269a6bd82a687c3cf5bc6f30b07aaea9:Assets/Door.cs.meta

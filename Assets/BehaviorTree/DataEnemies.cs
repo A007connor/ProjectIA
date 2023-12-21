@@ -15,6 +15,11 @@ public class DataEnemies : MonoBehaviour
 
     Vector3 _destination;
     public Vector3 target;
+
+    private void Awake()
+    {
+        checkDistance();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +31,6 @@ public class DataEnemies : MonoBehaviour
 
      void checkDistance()
     {
-        
         distance = Vector2.Distance(transform.position, _player.transform.position);
         if (distance < range)
         {
@@ -52,6 +56,8 @@ public class DataEnemies : MonoBehaviour
     public Vector3 getDestination() { return _destination; }
     public bool getInRange() { return inRange; }
     public float getDistance() { return distance; }
+    public void SetSpeedChase(float SpeedChase) { speedChase = SpeedChase; }
+    public float getSpeedChase() { return speedChase; }
     public float getSpeed() { return speed; }
     public Vector3 getPlayerPosition() { return _player.transform.position;}
     public Vector3 getCurrentPosition() { return this.transform.position; }

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/2D Platformer PiuPiu.meta
+<<<<<<<< HEAD:Assets/Animations/Props.meta
+guid: 9699f886cc2661845811ef7711e3afe6
+========
+guid: 73f0b99a0c7379246bf33488dd9dddef
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu.meta
+=======
+guid: eb5a7a929a5b19642a4a1736ae058418
+>>>>>>> c0d87a0c269a6bd82a687c3cf5bc6f30b07aaea9:Assets/Sprites/2D Platformer PiuPiu.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

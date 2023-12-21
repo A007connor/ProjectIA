@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Props.meta
+<<<<<<<< HEAD:Assets/Animations/Props.meta
+guid: 7dfab51cb09eea046a0c8cd816675c84
+========
+guid: 73f0b99a0c7379246bf33488dd9dddef
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu.meta
+=======
+guid: e4f5acc9c378e8541b2ef4d29b6435b1
+>>>>>>> c0d87a0c269a6bd82a687c3cf5bc6f30b07aaea9:Assets/Prefab/Pixel Art Top Down/Plant/Plant/Props.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
