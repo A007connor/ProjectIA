@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Metallic.png.meta
 guid: 99788167ab72747b18d1af46e93de3d1
+========
+guid: 74386ba6d70bb654a8c954906fe711aa
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Grid.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,6 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Metallic.png.meta
     filterMode: -1
     aniso: -1
     mipBias: -100
@@ -39,6 +44,15 @@ TextureImporter:
     wrapV: -1
     wrapW: -1
   nPOTScale: 1
+========
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Grid.png.meta
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
@@ -81,7 +95,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Metallic.png.meta
     spriteID: 
+========
+    spriteID: 5e97eb03825dee720800000000000000
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Grid.png.meta
     internalID: 0
     vertices: []
     indices: 

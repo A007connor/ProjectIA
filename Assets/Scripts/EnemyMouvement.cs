@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    void Update(float v)
+    void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -75,28 +75,10 @@ public class EnemyMovement : MonoBehaviour
         if (Time.time > attackTime)
         {
             EnemyAnim.SetBool("Attack", true);
-            //playerHealth.playerHurt(10);
+            
             attackTime = Time.time + attackRepeat;
             Instantiate(fireballPrefab, fire.position, Quaternion.identity);
         }
-    }
-
-    private void FireBall()
-    {
-        GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);
-
-        FireBall fireballScript = fireball.GetComponent<FireBall>();
-        if (fireballScript != null)
-        {
-            // Vous pouvez configurer d'autres propriétés de la boule de feu ici, si nécessaire
-            fireballScript.damage = 30; // Par exemple, définir des dégâts différents pour cette boule de feu
-        }
-
-        // Calculer la direction vers le joueur
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
-        Rigidbody2D rbFireball = fireball.GetComponent<Rigidbody2D>();
-        rbFireball.AddForce(directionToPlayer * 500f);
-        Destroy(fireball, 3f);
     }
 
     void Dead()

@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 7378610570219466369}
   - component: {fileID: 794535376165494965}
   - component: {fileID: 1101564377080142268}
+<<<<<<< HEAD
   m_Layer: 6
+=======
+  m_Layer: 9
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
   m_Name: Invocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,10 +158,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLayer:
     serializedVersion: 2
+<<<<<<< HEAD
     m_Bits: 512
   lichLayer:
     serializedVersion: 2
     m_Bits: 128
+=======
+    m_Bits: 128
+  lichLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
 --- !u!1 &6906948841574596540
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +179,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5363509569646167225}
   - component: {fileID: 6104338705603773952}
+<<<<<<< HEAD
   m_Layer: 6
+=======
+  m_Layer: 9
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
   m_Name: skeleton_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}

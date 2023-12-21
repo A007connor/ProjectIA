@@ -59,7 +59,9 @@ public class Boss_Minotaur : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
-        
+
+        SceneManager.LoadScene("Boss2test");
+
 
     }
     void ChangeState()

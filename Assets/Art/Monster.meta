@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art/Monster.meta
 guid: c4dea0efcc9f5444e91268ff28ec3379
+========
+guid: 3e55adc52c28b2f44a3a55091ca0f865
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Animations/Monsters/Minotaur.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

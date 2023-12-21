@@ -94,10 +94,17 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+<<<<<<< HEAD
     - _HightLightsSpread: 5
     - _Metallic: 0
     - _Mode: 0
     - _MovementSpeed: 1.5
+=======
+    - _HightLightsSpread: 2.5
+    - _Metallic: 0
+    - _Mode: 0
+    - _MovementSpeed: 0.5
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueControl: 0

@@ -156,11 +156,14 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6079766926885364064, guid: 7340b8451a3874b44a2951c73626bd85,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+=======
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
     - target: {fileID: 7607151405582801055, guid: 7340b8451a3874b44a2951c73626bd85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -211,11 +214,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8575311613226532699, guid: 7340b8451a3874b44a2951c73626bd85,
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -233,7 +239,11 @@ GameObject:
   - component: {fileID: 289531369}
   - component: {fileID: 289531368}
   - component: {fileID: 289531370}
+<<<<<<< HEAD
   m_Layer: 7
+=======
+  m_Layer: 8
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4991,6 +5001,15 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
+=======
+--- !u!1 &985585126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4117814067510015527, guid: 7340b8451a3874b44a2951c73626bd85,
+    type: 3}
+  m_PrefabInstance: {fileID: 202392378}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
 --- !u!1 &1318726041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,12 +5045,15 @@ Transform:
   - {fileID: 877477934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1333555159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6079766926885364064, guid: 7340b8451a3874b44a2951c73626bd85,
     type: 3}
   m_PrefabInstance: {fileID: 202392378}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
 --- !u!1 &1337777597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,12 +5239,16 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1333555159}
     - target: {fileID: 3686953122986677046, guid: 8a30f328f92c1444ea52e3363b75ac8b,
         type: 3}
       propertyPath: invocationLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 985585126}
+>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a
     - target: {fileID: 3686953122986677046, guid: 8a30f328f92c1444ea52e3363b75ac8b,
         type: 3}
       propertyPath: enemySpawners.Array.data[0]

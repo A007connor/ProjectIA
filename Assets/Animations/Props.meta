@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Props.meta
 guid: 7dfab51cb09eea046a0c8cd816675c84
+========
+guid: 73f0b99a0c7379246bf33488dd9dddef
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

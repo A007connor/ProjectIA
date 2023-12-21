@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Base.png.meta
 guid: b163bf2a288dd46efa3cc7460d5f9cd8
+========
+guid: e317abfef38208943a1eeffa8b695164
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Sprites/speechBubble06.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Base.png.meta
   serializedVersion: 11
+========
+  serializedVersion: 9
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Sprites/speechBubble06.png.meta
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -23,7 +31,10 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Base.png.meta
   vTOnly: 0
+========
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Sprites/speechBubble06.png.meta
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -35,10 +46,17 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Base.png.meta
     wrapU: -1
     wrapV: -1
     wrapW: -1
   nPOTScale: 1
+========
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Sprites/speechBubble06.png.meta
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
@@ -81,8 +99,12 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Base.png.meta
     spriteID: 
     internalID: 0
+========
+    spriteID: 3eb1a79c1e8d59c439bdb69abc03bcef
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Sprites/speechBubble06.png.meta
     vertices: []
     indices: 
     edges: []

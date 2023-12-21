@@ -9,17 +9,21 @@ public class FireBall : MonoBehaviour
     [SerializeField]
     private Animator fireAnim;
 
-    private BoxCollider boxCollider;
+    private BoxCollider2D boxCollider;
 
+    private float direction;
 
+    [SerializeField]
+    private string targetTag;
 
     private bool hit;
-
-    public int damage = 20;
+    private int damage;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        hit = true;
+        boxCollider.enabled = false;
+        if (collision.gameObject.CompareTag("Player"))
         {
             //PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             //if (playerHealth != null)
@@ -35,10 +39,32 @@ public class FireBall : MonoBehaviour
 
     private void Update()
     {
-        if (hit) return;
-        float movementSpeed = Time.deltaTime;
-        boxCollider.enabled = false;
-        transform.Translate(movementSpeed, 0, 0);
+        if (hit) 
+        {
+            return;
+        }
+        float moveSpeed = speed * Time.deltaTime * direction;
+        transform.Translate(moveSpeed, 0, 0);
+    }
+
+    public void SetDirection(float _direction)
+    {
+        direction = _direction;
+        gameObject.SetActive(true);
+        hit = false;
+        boxCollider.enabled = true;
+
+        float localScaleX = transform.localScale.x;
+        if(Mathf.Sign(localScaleX) != direction)
+        {
+            localScaleX = -localScaleX;
+        }
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+    }
+
+   private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 
 }

@@ -17,13 +17,16 @@ public class Boss_Lich : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject player;
     [SerializeField] DataEnemies enemies;
+
     private void Awake()
     {
         SpawnEnemies();
     }
+   
     void Start()
     {
-        
+        currentCouldown = maxCouldown;
+
         currentHp = maxHp;
         
     }
@@ -67,7 +70,7 @@ public class Boss_Lich : MonoBehaviour
         
         Destroy(gameObject);
     }
-    void SpawnEnemies()
+    private void SpawnEnemies()
     {
         foreach(Transform spawner in enemySpawners)
         {

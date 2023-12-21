@@ -6,56 +6,43 @@ using BehaviorTree;
 
 public class TaskPatrol : Node
 {
-    private Transform _transform;
+    [SerializeField] private Transform _transform;
     private Animator EnemyAnim;
     private Transform[] _waypoints;
 
-    private int currentWaypointIndex = 0;
+    [SerializeField] private Transform enemy;
+    [SerializeField] private float speed;
+    private Vector3 initScale;
+    private bool movingLeft;
 
-    private float waitTime = 1f;
-    private float waitCounter = 0f;
-    private bool waiting = false;
-
-    public TaskPatrol(Transform transform, Transform[] waypoints)
+    private void Awake()
     {
-        _transform = transform;
-        EnemyAnim = transform.GetComponent<Animator>();
-        _waypoints = waypoints;
-
+        initScale = enemy.localScale;
     }
 
-    public override NodeState Evaluate()
+    private void Update()
     {
-       if(waiting)
+        if (movingLeft)
         {
-            waitCounter += Time.deltaTime;
-            if(waitCounter >= waitTime)
-            {
-                waiting = false;
-                EnemyAnim.SetBool("Walking", true);
-            }
-        }
-       else
-        {
-            Transform wp = _waypoints[currentWaypointIndex];
-            if (Vector3.Distance(_transform.position,wp.position) < 0.01f)
-            {
-                _transform.position = wp.position;
-                waitCounter = 0f;
-                waiting = true;
-
-                currentWaypointIndex = (currentWaypointIndex + 1) % _waypoints.Length;
-                EnemyAnim.SetBool("Walking", false);
-            }
-            else
-            {
-                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, GuardBT.speed * Time.deltaTime);
-                _transform.LookAt(wp.position);
-            }
+            MoveInDirection(-1);
             
         }
-        state = NodeState.RUNNING;
-        return state;
+        else
+        {
+            MoveInDirection(1);
+
+        }
+        
     }
+
+    private void MoveInDirection(int direction)
+    {
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, 
+            initScale.y * direction, initScale.z);
+
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * speed,enemy.position.y,enemy.position.z);
+    }
+
+    
 
 }

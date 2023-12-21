@@ -1,0 +1,20 @@
+<<<<<<<< HEAD:Scripts/BehavioTree.meta
+fileFormatVersion: 2
+guid: 5530d104b7f850444a05f944fd195de4
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+========
+fileFormatVersion: 2
+guid: 91fb70ce21fc4ae4eb8557d404265018
+folderAsset: yes
+timeCreated: 1575044776
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/2D Platformer PiuPiu/Animations.meta

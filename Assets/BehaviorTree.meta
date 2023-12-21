@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/BehaviorTree.meta
 guid: d3bc77a62c6613e41aab0c32d35cba68
+========
+guid: 7dfab51cb09eea046a0c8cd816675c84
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Animations/Props.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

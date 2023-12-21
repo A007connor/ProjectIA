@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Emission.png.meta
 guid: cf0d2fe215a8b47b0bccff3401e2e62c
+========
+guid: bee353be4dd7e60458fed37f8656f65a
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Background.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,6 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Emission.png.meta
     filterMode: -1
     aniso: -1
     mipBias: -100
@@ -39,6 +44,15 @@ TextureImporter:
     wrapV: -1
     wrapW: -1
   nPOTScale: 1
+========
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Background.png.meta
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
@@ -81,7 +95,11 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Samples/Universal RP/14.0.9/URP Package Samples/Shaders/Lit/Textures/Coins_Emission.png.meta
     spriteID: 
+========
+    spriteID: 5e97eb03825dee720800000000000000
+>>>>>>>> 20b55a1fa3e350377f96424e821737b68b351a5a:Assets/Spooky Trees/Sprites/Background.png.meta
     internalID: 0
     vertices: []
     indices: 
