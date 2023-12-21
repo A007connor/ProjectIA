@@ -12,8 +12,7 @@ public class EyeProjectiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = (_targetPosition + transform.position).normalized;
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(_targetPosition * speed * Time.deltaTime);
         currentduration += 1 * Time.deltaTime;
         if (currentduration >= durationMax)
         {

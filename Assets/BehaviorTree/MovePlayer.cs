@@ -22,7 +22,7 @@ public class MovePlayer : ActionNode
         dataEnemies.target = dataEnemies._player.transform.position;
         dataEnemies.setDestination(dataEnemies.getTarget());
 
-        if (!dataEnemies.getInRange())
+        if (!dataEnemies.getInRange() )
         {
             return State.Failure;
         }
