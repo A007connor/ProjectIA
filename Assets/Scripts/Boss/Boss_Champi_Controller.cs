@@ -124,36 +124,36 @@ public class Boss_Champi_Controller : MonoBehaviour
         // On détermine à quelle heure la réflexion sera terminée
         _thinkEndTime = Time.time + Random.Range(_thinkDuration.x, _thinkDuration.y);
     }
-    public EnemyState ThinkNear()
+    public ChampiState ThinkNear()
     {
         float thought = Random.value;
         if (thought < 0.15f)
         {
-            return EnemyState.THINKING;
+            return ChampiState.THINKING;
         }
         else if (thought < 0.3f)
         {
-            return EnemyState.FLEEING;
+            return ChampiState.FLEEING;
         }
         else
         {
-            return EnemyState.ATTACKING;
+            return ChampiState.ATTACKING;
         }
     }
-    public EnemyState ThinkFar()
+    public ChampiState ThinkFar()
     {
         float thought = Random.value;
         if (thought < 0.15f)
         {
-            return EnemyState.THINKING;
+            return ChampiState.THINKING;
         }
         else if (thought < 0.3f)
         {
-            return EnemyState.FLEEING;
+            return ChampiState.FLEEING;
         }
         else
         {
-            return EnemyState.HUNTING;
+            return ChampiState.HUNTING;
         }
     }
     public void EndThinking()
@@ -211,21 +211,21 @@ public class Boss_Champi_Controller : MonoBehaviour
         // On determine l'heure avant laquelle doit avoir lieu la prochaine attaque pour déclencher un combo
         _attackComboEndTime = Time.time + _attackComboDuration;
         // On envoie le numéro de combo à l'Animator
-        _animator.SetInteger("AttackCombo", _combo);
+        _animator.SetInteger("IsCombo", _combo);
     }
     public void DoAttack()
     {
         // On calcule la progression de l'attaque
         float attackProgress = (_attackDuration - (_attackEndTime - Time.time)) / _attackDuration;
         // On définit le paramètre d'animator concernant la progression de l'attaque
-        _animator.SetFloat("AttackProgress", attackProgress);
+        _animator.SetFloat("IsCombo", attackProgress);
     }
     public void EndAttack()
     {
         // On désactive l'AttackBox
         _attackBox.SetActive(false);
         // On définit le paramètre d'animator concernant la progression de l'attaque à 0
-        _animator.SetFloat("AttackProgress", 0f);
+        _animator.SetFloat("IsCombo", 0f);
     }
 
     public void StartKnockBack(Vector2 knockBackDirection)
@@ -246,7 +246,7 @@ public class Boss_Champi_Controller : MonoBehaviour
         // On calcule la nouvelle position Y du sprite
         float newYPos = curvedAmount * _knockBackVerticalForce;
         // On applique le mouvement
-        _graphics.localPosition = new Vector3(0, newYPos, _graphics.localPosition.z);
+        _graphics.localPosition = new Vector2(newYPos, _graphics.localPosition.y);
     }
     public void DoHorizontalKnockBack()
     {
@@ -262,7 +262,7 @@ public class Boss_Champi_Controller : MonoBehaviour
     public void EndKnockBack()
     {
         // On snap la position Y du sprite à 0
-        _graphics.localPosition = new Vector3(0, 0, _graphics.localPosition.z);
+        _graphics.localPosition = new Vector2(0, _graphics.localPosition.y);
     }
 
     public void StartVanishing()

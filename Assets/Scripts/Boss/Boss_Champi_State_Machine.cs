@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyState
+public enum ChampiState
 {
     THINKING,
     HUNTING,
@@ -14,12 +14,12 @@ public enum EnemyState
 
 public class Boss_Champi_State_Machine : MonoBehaviour
 {
-    [SerializeField] private EnemyState _currentState;
+    [SerializeField] private ChampiState _currentState;
     private Animator _animator;
     private Boss_Champi_Controller _controller;
     private HitBox _hitbox;
 
-    public EnemyState CurrentState { get => _currentState; private set => _currentState = value; }
+    public ChampiState CurrentState { get => _currentState; private set => _currentState = value; }
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -28,7 +28,7 @@ public class Boss_Champi_State_Machine : MonoBehaviour
     }
     private void Start()
     {
-        CurrentState = EnemyState.THINKING;
+        CurrentState = ChampiState.THINKING;
         OnEnterThinking();
     }
     private void Update()
@@ -40,26 +40,26 @@ public class Boss_Champi_State_Machine : MonoBehaviour
         OnStateFixedUpdate(CurrentState);
     }
 
-    private void OnStateEnter(EnemyState state)
+    private void OnStateEnter(ChampiState state)
     {
         switch (state)
         {
-            case EnemyState.THINKING:
+            case ChampiState.THINKING:
                 OnEnterThinking();
                 break;
-            case EnemyState.HUNTING:
+            case ChampiState.HUNTING:
                 OnEnterHunting();
                 break;
-            case EnemyState.FLEEING:
+            case ChampiState.FLEEING:
                 OnEnterFleeing();
                 break;
-            case EnemyState.ATTACKING:
+            case ChampiState.ATTACKING:
                 OnEnterAttacking();
                 break;
-            case EnemyState.HURT:
+            case ChampiState.HURT:
                 OnEnterHurt();
                 break;
-            case EnemyState.DEAD:
+            case ChampiState.DEAD:
                 OnEnterDead();
                 break;
             default:
@@ -67,26 +67,26 @@ public class Boss_Champi_State_Machine : MonoBehaviour
                 break;
         }
     }
-    private void OnStateUpdate(EnemyState state)
+    private void OnStateUpdate(ChampiState state)
     {
         switch (state)
         {
-            case EnemyState.THINKING:
+            case ChampiState.THINKING:
                 OnUpdateThinking();
                 break;
-            case EnemyState.HUNTING:
+            case ChampiState.HUNTING:
                 OnUpdateHunting();
                 break;
-            case EnemyState.FLEEING:
+            case ChampiState.FLEEING:
                 OnUpdateFleeing();
                 break;
-            case EnemyState.ATTACKING:
+            case ChampiState.ATTACKING:
                 OnUpdateAttacking();
                 break;
-            case EnemyState.HURT:
+            case ChampiState.HURT:
                 OnUpdateHurt();
                 break;
-            case EnemyState.DEAD:
+            case ChampiState.DEAD:
                 OnUpdateDead();
                 break;
             default:
@@ -94,26 +94,26 @@ public class Boss_Champi_State_Machine : MonoBehaviour
                 break;
         }
     }
-    private void OnStateFixedUpdate(EnemyState state)
+    private void OnStateFixedUpdate(ChampiState state)
     {
         switch (state)
         {
-            case EnemyState.THINKING:
+            case ChampiState.THINKING:
                 OnFixedUpdateThinking();
                 break;
-            case EnemyState.HUNTING:
+            case ChampiState.HUNTING:
                 OnFixedUpdateHunting();
                 break;
-            case EnemyState.FLEEING:
+            case ChampiState.FLEEING:
                 OnFixedUpdateFleeing();
                 break;
-            case EnemyState.ATTACKING:
+            case ChampiState.ATTACKING:
                 OnFixedUpdateAttacking();
                 break;
-            case EnemyState.HURT:
+            case ChampiState.HURT:
                 OnFixedUpdateHurt();
                 break;
-            case EnemyState.DEAD:
+            case ChampiState.DEAD:
                 OnFixedUpdateDead();
                 break;
             default:
@@ -121,26 +121,26 @@ public class Boss_Champi_State_Machine : MonoBehaviour
                 break;
         }
     }
-    private void OnStateExit(EnemyState state)
+    private void OnStateExit(ChampiState state)
     {
         switch (state)
         {
-            case EnemyState.THINKING:
+            case ChampiState.THINKING:
                 OnExitThinking();
                 break;
-            case EnemyState.HUNTING:
+            case ChampiState.HUNTING:
                 OnExitHunting();
                 break;
-            case EnemyState.FLEEING:
+            case ChampiState.FLEEING:
                 OnExitFleeing();
                 break;
-            case EnemyState.ATTACKING:
+            case ChampiState.ATTACKING:
                 OnExitAttacking();
                 break;
-            case EnemyState.HURT:
+            case ChampiState.HURT:
                 OnExitHurt();
                 break;
-            case EnemyState.DEAD:
+            case ChampiState.DEAD:
                 OnExitDead();
                 break;
             default:
@@ -148,7 +148,7 @@ public class Boss_Champi_State_Machine : MonoBehaviour
                 break;
         }
     }
-    private void TransitionToState(EnemyState toState)
+    private void TransitionToState(ChampiState toState)
     {
         OnStateExit(CurrentState);
         CurrentState = toState;
@@ -167,7 +167,7 @@ public class Boss_Champi_State_Machine : MonoBehaviour
         // Si la Hitbox est touchée
         if (_hitbox.IsHit())
         {
-            TransitionToState(EnemyState.HURT);
+            TransitionToState(ChampiState.HURT);
             return;
         }
         // Si la réflexion est terminée
@@ -203,21 +203,21 @@ public class Boss_Champi_State_Machine : MonoBehaviour
     private void OnEnterHunting()
     {
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsWalking", true);
+        _animator.SetBool("IsRun", true);
     }
     private void OnUpdateHunting()
     {
         // Si la Hitbox est touchée
         if (_hitbox.IsHit())
         {
-            TransitionToState(EnemyState.HURT);
+            TransitionToState(ChampiState.HURT);
             return;
         }
         // Si la cible est à portée ou que le délai entre deux réflexions est terminé
         if (_controller.IsTargetReachable
             || _controller.IsDelayBetweenThoughtsEnded)
         {
-            TransitionToState(EnemyState.THINKING);
+            TransitionToState(ChampiState.THINKING);
             return;
         }
 
@@ -232,26 +232,26 @@ public class Boss_Champi_State_Machine : MonoBehaviour
     private void OnExitHunting()
     {
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsWalking", false);
+        _animator.SetBool("IsRun", false);
     }
 
     private void OnEnterFleeing()
     {
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsWalking", true);
+        _animator.SetBool("IsRun", true);
     }
     private void OnUpdateFleeing()
     {
         // Si la Hitbox est touchée
         if (_hitbox.IsHit())
         {
-            TransitionToState(EnemyState.HURT);
+            TransitionToState(ChampiState.HURT);
             return;
         }
         // Si le délai entre deux réflexions est terminé
         if (_controller.IsDelayBetweenThoughtsEnded)
         {
-            TransitionToState(EnemyState.THINKING);
+            TransitionToState(ChampiState.THINKING);
             return;
         }
 
@@ -266,7 +266,7 @@ public class Boss_Champi_State_Machine : MonoBehaviour
     private void OnExitFleeing()
     {
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsWalking", false);
+        _animator.SetBool("IsRun", false);
     }
 
     private void OnEnterAttacking()
@@ -274,14 +274,14 @@ public class Boss_Champi_State_Machine : MonoBehaviour
         // On démarre l'attaque
         _controller.StartAttack();
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsAttacking", true);
+        _animator.SetBool("IsAttack", true);
     }
     private void OnUpdateAttacking()
     {
         // Si l'attaque est terminée
         if (_controller.IsAttackEnded)
         {
-            TransitionToState(EnemyState.THINKING);
+            TransitionToState(ChampiState.THINKING);
             return;
         }
 
@@ -296,7 +296,7 @@ public class Boss_Champi_State_Machine : MonoBehaviour
         // On termine l'attaque
         _controller.EndAttack();
         // On envoie les paramètres necessaires à l'Animator
-        _animator.SetBool("IsAttacking", false);
+        _animator.SetBool("IsAttack", false);
     }
 
     private void OnEnterHurt()
@@ -314,13 +314,13 @@ public class Boss_Champi_State_Machine : MonoBehaviour
             // S'il reste des points de vie
             if (_controller.HealthPoints > 0)
             {
-                TransitionToState(EnemyState.THINKING);
+                TransitionToState(ChampiState.THINKING);
                 return;
             }
             // Sinon
             else
             {
-                TransitionToState(EnemyState.DEAD);
+                TransitionToState(ChampiState.DEAD);
                 return;
             }
         }
