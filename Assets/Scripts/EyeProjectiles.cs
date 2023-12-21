@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class EyeProjectiles : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    float durationMax = 2f;
+    float currentduration;
+    float speed = 5;
+    Vector3 _targetPosition;
+    
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(_targetPosition * speed * Time.deltaTime);
+        currentduration += 1 * Time.deltaTime;
+        if (currentduration >= durationMax)
+        {
+            Destroy(gameObject);
+        }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+    public void setTargetPosition(Vector3 targetPosition) { _targetPosition = targetPosition; }
 }

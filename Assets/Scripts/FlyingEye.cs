@@ -21,11 +21,12 @@ public class FlyingEye : MonoBehaviour
         
         if(currentCouldown < maxCouldown)
         {
-            enemies.setDestination(this.transform.position);
-            currentCouldown+= 1 *Time.deltaTime;
+            enemies.SetSpeedChase(0);
+            currentCouldown += 1 *Time.deltaTime;
         }
         else
         {
+            enemies.SetSpeedChase(7);
             attack();
         }
         
@@ -39,6 +40,14 @@ public class FlyingEye : MonoBehaviour
             
             GameObject newProjectiles = Instantiate(projectiles, this.transform.position, this.transform.rotation);
             currentCouldown = 0;
+            Vector3 directionToPlayer = (enemies._player.transform.position - transform.position).normalized;
+
+            // Passer la direction au projectile
+            EyeProjectiles eyeProj = newProjectiles.GetComponent<EyeProjectiles>();
+            if (eyeProj != null)
+            {
+                eyeProj.setTargetPosition(directionToPlayer);
+            }
         }
     }
 }
