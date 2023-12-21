@@ -21,13 +21,12 @@ public class FlyingEye : MonoBehaviour
         
         if(currentCouldown < maxCouldown)
         {
-            enemies.setDestination(this.transform.position);
-            Debug.Log(enemies.getDestination());
-            Debug.Log(" j'ai attaquer je ne bouge plus");
+            enemies.SetSpeedChase(0);
             currentCouldown += 1 *Time.deltaTime;
         }
         else
         {
+            enemies.SetSpeedChase(7);
             attack();
         }
         
