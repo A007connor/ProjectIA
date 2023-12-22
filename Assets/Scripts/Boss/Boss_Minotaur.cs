@@ -35,7 +35,7 @@ public class Boss_Minotaur : MonoBehaviour
     void Update()
     {
         ChangeState();
-        Debug.Log(currentState.GetState());
+        
         if (currentState.GetState() is ChaseState)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, playerTransform.position, moveSpeed * Time.deltaTime);

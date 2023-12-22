@@ -7,22 +7,22 @@ public class spawnSystem : MonoBehaviour
 {
     [SerializeField] GameObject gameObject;
     [SerializeField] GameObject player;
+    [SerializeField] List<Transform> enemySpawners;
     DataEnemies dataEnemies;
     // Start is called before the first frame update
-    private void Awake()
-    {
-        dataEnemies = gameObject.GetComponent<DataEnemies>();
-        dataEnemies.setSpawn(this.transform);
-        dataEnemies.setPlayer(player);
-    }
     void Start()
     {
-
+        dataEnemies = gameObject.GetComponent<DataEnemies>();
         Spawn();
     }
-
     void Spawn()
     {
-        Instantiate(gameObject, this.transform.position, this.transform.rotation);
+        
+            foreach (Transform spawner in enemySpawners)
+            {
+                Instantiate(gameObject, spawner.position, spawner.rotation);
+                dataEnemies.setPlayer(player);
+                dataEnemies.setSpawn(spawner);
+            }
     }
 }
