@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1898739249229876521}
   - component: {fileID: 6515341293614862607}
   - component: {fileID: 6034198053959876979}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: FlyingEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,11 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   range: 6
-  spawnRange: 6
   _player: {fileID: 0}
   _spawn: {fileID: 0}
-  distanceToPlayer: 0
-  distanceToSpawn: 0
+  distance: 0
   speed: 2
   speedChase: 7
   target: {x: 0, y: 0, z: 0}
@@ -98,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2652072290815896065}
   - component: {fileID: 8982885759972707106}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Attack3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,9 +156,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -989025615
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1783915696, guid: 05f2d87f7ffe9ce4a9c8018059f1fd57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
