@@ -157,6 +157,9 @@ MonoBehaviour:
   lichLayer:
     serializedVersion: 2
     m_Bits: 128
+  invocationLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6906948841574596540
 GameObject:
   m_ObjectHideFlags: 0
