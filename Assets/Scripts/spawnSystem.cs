@@ -12,7 +12,25 @@ public class spawnSystem : MonoBehaviour
     [SerializeField] Boss_Minotaur minotaur;
     DataEnemies dataEnemies;
 
-    TestSpawer testSpawner;
+    public TestSpawer testSpawner;
+
+    private void OnEnable()
+    {
+        Boss_Minotaur.onBossDeath += HandleBossDeath;
+    }
+    private void OnDisable()
+    {
+        Boss_Minotaur.onBossDeath -= HandleBossDeath;
+    }
+
+    private void HandleBossDeath()
+    {
+        if(testSpawner != null)
+        {
+            testSpawner.killedBoss[1] = true; // Or use the appropriate boss index
+            testSpawner.SaveGame();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +38,11 @@ public class spawnSystem : MonoBehaviour
         minotaur =  gameObject.GetComponent<Boss_Minotaur>();
         dataEnemies = gameObject.GetComponent<DataEnemies>();
         Spawnennemies();
-        //if (testSpawner.killedBoss[1] == false)
-        //{
+
+        if (testSpawner != null && testSpawner.killedBoss.Count > 1 && testSpawner.killedBoss[1] == false)
+        {
             SpawnBoss();
-        //}
+        }
 
     }
      void Spawnennemies()
@@ -31,16 +50,16 @@ public class spawnSystem : MonoBehaviour
         
         foreach (Transform spawner in enemySpawners)
         {
+
             if(dataEnemies != null)
             {
                 Instantiate(gameObject, spawner.position, spawner.rotation);
                 dataEnemies.setPlayer(player);
                 dataEnemies.setSpawn(spawner);
+            }               
+                
         }
-                
-                
-    }
-    }   
+     }   
     void SpawnBoss()
     {  
         foreach (Transform spawner in enemySpawners)
@@ -52,4 +71,5 @@ public class spawnSystem : MonoBehaviour
             Instantiate(gameObject, spawner.position, spawner.rotation);
         }
     }
+
 }

@@ -5,17 +5,18 @@ using UnityEngine;
 public class TestSpawer : MonoBehaviour
 {
     public SaveSystem saveSystem;
+    public List<bool> killedBoss = new List<bool>();
 
     public bool boss1Killed;
     public bool boss2Killed;
     public bool boss3Killed;
 
 
-    public List<bool> killedBoss = new List<bool>();
     private void Awake()
     {
         LoadGame();
     }
+
     public void Clear()
     {
 
@@ -25,15 +26,20 @@ public class TestSpawer : MonoBehaviour
     public void Initialize()
     {
         killedBoss.Add(false);
+        killedBoss.Add(false);
+        killedBoss.Add(false);
     }
 
     public void SaveGame()
     {
         SaveData data = new SaveData();
-        for(int i = 0; i < killedBoss.Count; i++)
+        data.bossData = killedBoss;
+
+/*        for(int i = 0; i < killedBoss.Count; i++)
         {
             data.Add(killedBoss[i]);
-        }
+        }*/
+
         var dataToSave = JsonUtility.ToJson(data);
         saveSystem.SaveData(dataToSave);
     }
@@ -42,16 +48,17 @@ public class TestSpawer : MonoBehaviour
     {
 
         Clear();
-        string dataToLoad = "";
-        dataToLoad = saveSystem.LoadData();
+        string dataToLoad = saveSystem.LoadData();
+        //dataToLoad = saveSystem.LoadData();
         if (String.IsNullOrEmpty(dataToLoad)==false)
         {
             SaveData data = JsonUtility.FromJson<SaveData>(dataToLoad);
-            for (int i = 0;i < data.bossData.Count; i++)
+            killedBoss = data.bossData;
+/*            for (int i = 0;i < data.bossData.Count; i++)
             {
                 var bossStatue = data.bossData[i];
                 killedBoss.Add(bossStatue);
-            }
+            }*/
         }
     }
 
