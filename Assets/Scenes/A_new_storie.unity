@@ -7919,10 +7919,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveSystem: {fileID: 776588950}
+  killedBoss: 
   boss1Killed: 0
   boss2Killed: 0
   boss3Killed: 0
-  killedBoss: 
 --- !u!4 &313956396
 Transform:
   m_ObjectHideFlags: 0
@@ -31079,6 +31079,7 @@ MonoBehaviour:
   - {fileID: 596929097}
   minotaur: {fileID: 7171496239439968991, guid: e807bfcf93dceda45b3c42ae19aaa405,
     type: 3}
+  testSpawner: {fileID: 0}
 --- !u!4 &678422034
 Transform:
   m_ObjectHideFlags: 0
@@ -32583,7 +32584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveName: SaveData_
-  saveDataIndex: 0
+  saveDataIndex: 1
 --- !u!4 &776588951
 Transform:
   m_ObjectHideFlags: 0
@@ -89437,6 +89438,7 @@ MonoBehaviour:
   - {fileID: 6157853238424036113, guid: e807bfcf93dceda45b3c42ae19aaa405, type: 3}
   minotaur: {fileID: 7171496239439968991, guid: e807bfcf93dceda45b3c42ae19aaa405,
     type: 3}
+  testSpawner: {fileID: 313956395}
 --- !u!213 &1489430093
 Sprite:
   m_ObjectHideFlags: 0

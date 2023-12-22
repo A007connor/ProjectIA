@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Boss_Minotaur : MonoBehaviour
 {
+    public delegate void BossDeathEventHandler();
+    public static event BossDeathEventHandler onBossDeath;
+
     [SerializeField] LayerMask wallLayer;
     [SerializeField] int maxhp = 8;
     [SerializeField] int currentHp;
@@ -19,7 +22,7 @@ public class Boss_Minotaur : MonoBehaviour
     [SerializeField] ChaseState chaseState;
     [SerializeField] AttackState attackState;
     [SerializeField] IdleState idleState;
-    TestSpawer testSpawer;
+    //public TestSpawer testSpawer;
     
     Vector3 chargeDirection;
     
@@ -83,9 +86,15 @@ public class Boss_Minotaur : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
-        testSpawer.killedBoss[1] = true;
-        testSpawer.SaveGame();
+        NotifyBossDeath();
+        /*testSpawer.killedBoss[1] = true;
+        testSpawer.SaveGame();*/
 
+    }
+    void NotifyBossDeath()
+    {
+        // Notify the scene about the boss's death
+        onBossDeath?.Invoke();
     }
     void ChangeState()
     {
