@@ -86,6 +86,7 @@ public class Boss_Minotaur : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+
         NotifyBossDeath();
         /*testSpawer.killedBoss[1] = true;
         testSpawer.SaveGame();*/

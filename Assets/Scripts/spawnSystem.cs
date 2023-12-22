@@ -32,6 +32,7 @@ public class spawnSystem : MonoBehaviour
             testSpawner.SaveGame();
         }
     }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,35 +40,39 @@ public class spawnSystem : MonoBehaviour
         minotaur =  gameObject.GetComponent<Boss_Minotaur>();
         dataEnemies = gameObject.GetComponent<DataEnemies>();
         Spawnennemies();
+
         if (testSpawner != null && testSpawner.killedBoss.Count > 1 && testSpawner.killedBoss[1] == false)
         {
             SpawnBoss();
         }
 
     }
-    void Spawnennemies()
+     void Spawnennemies()
     {
         
-            foreach (Transform spawner in enemySpawners)
+        foreach (Transform spawner in enemySpawners)
+        {
+
+            if(dataEnemies != null)
             {
-                if(dataEnemies != null)
-                {
-                    Instantiate(gameObject, spawner.position, spawner.rotation);
-                    dataEnemies.setPlayer(player);
-                    dataEnemies.setSpawn(spawner);
-                }               
+
+                dataEnemies.setPlayer(player);
+                dataEnemies.setSpawn(spawner);
+                Instantiate(gameObject, spawner.position, spawner.rotation);
                 
-            }
-    }   
+            }               
+                
+        }
+     }   
     void SpawnBoss()
     {  
         foreach (Transform spawner in enemySpawners)
         {
             if (minotaur != null)
             {
-                Instantiate(gameObject, spawner.position, spawner.rotation);
                 minotaur.setPlayerTransform(player.transform);
             }
+            Instantiate(gameObject, spawner.position, spawner.rotation);
         }
     }
 
