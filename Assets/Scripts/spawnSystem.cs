@@ -20,26 +20,26 @@ public class spawnSystem : MonoBehaviour
         minotaur =  gameObject.GetComponent<Boss_Minotaur>();
         dataEnemies = gameObject.GetComponent<DataEnemies>();
         Spawnennemies();
-        if (testSpawner.killedBoss[1] == false)
-        {
+        //if (testSpawner.killedBoss[1] == false)
+        //{
             SpawnBoss();
-        }
+        //}
 
     }
-    void Spawnennemies()
+     void Spawnennemies()
     {
         
-            foreach (Transform spawner in enemySpawners)
+        foreach (Transform spawner in enemySpawners)
+        {
+            if(dataEnemies != null)
             {
-                if(dataEnemies != null)
-                {
-                    Instantiate(gameObject, spawner.position, spawner.rotation);
-                    dataEnemies.setPlayer(player);
-                    dataEnemies.setSpawn(spawner);
-                }
+                Instantiate(gameObject, spawner.position, spawner.rotation);
+                dataEnemies.setPlayer(player);
+                dataEnemies.setSpawn(spawner);
+        }
                 
                 
-            }
+    }
     }   
     void SpawnBoss()
     {  
@@ -47,9 +47,9 @@ public class spawnSystem : MonoBehaviour
         {
             if (minotaur != null)
             {
-                Instantiate(gameObject, spawner.position, spawner.rotation);
                 minotaur.setPlayerTransform(player.transform);
             }
+            Instantiate(gameObject, spawner.position, spawner.rotation);
         }
     }
 }
