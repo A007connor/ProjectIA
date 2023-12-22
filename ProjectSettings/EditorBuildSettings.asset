@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/A_new_storie.unity
+    guid: 94369b541fb5a8e49bdb72e55eba876e
+  - enabled: 1
+    path: Assets/Scenes/CrytoLiichLichLaBabine.unity
+    guid: b42653b81ed934449a31cdcf52bf334b
   m_configObjects: {}
