@@ -19,7 +19,10 @@ public class Boss_Minotaur : MonoBehaviour
     [SerializeField] ChaseState chaseState;
     [SerializeField] AttackState attackState;
     [SerializeField] IdleState idleState;
+    TestSpawer testSpawer;
+    
     Vector3 chargeDirection;
+    
 
 
     // Start is called before the first frame update
@@ -80,7 +83,8 @@ public class Boss_Minotaur : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
-        
+        testSpawer.killedBoss[1] = true;
+        testSpawer.SaveGame();
 
     }
     void ChangeState()
@@ -90,5 +94,5 @@ public class Boss_Minotaur : MonoBehaviour
         if (distanceToPlayer <= 6f) currentState.SwitchNextState(chaseState);
         if (distanceToPlayer <= 4f) currentState.SwitchNextState(attackState);
     }
-
+    public void setPlayerTransform (Transform PlayerTransform) { playerTransform = PlayerTransform; }
 }
