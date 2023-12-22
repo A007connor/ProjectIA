@@ -10815,6 +10815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251350296}
   - component: {fileID: 1251350297}
+  - component: {fileID: 1251350298}
   m_Layer: 0
   m_Name: Dragon_Boss
   m_TagString: Untagged
@@ -10852,6 +10853,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 1490889801}
+--- !u!195 &1251350298
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251350295}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &1333555167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5067731664754012602, guid: 7340b8451a3874b44a2951c73626bd85,
@@ -11259,6 +11282,25 @@ Transform:
   - {fileID: 357433037}
   m_Father: {fileID: 1251350296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2012791609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789776088676536434, guid: f63bb4338026ea1489c04549578860bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2914456341913907685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2012791610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012791609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babb7bca6bd23d44c9a80e4314a3a4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!1001 &2914456341913907685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11325,7 +11367,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1789776088676536434, guid: f63bb4338026ea1489c04549578860bd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012791610}
   m_SourcePrefab: {fileID: 100100000, guid: f63bb4338026ea1489c04549578860bd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

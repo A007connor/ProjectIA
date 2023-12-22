@@ -6,39 +6,32 @@ public class FireBall : MonoBehaviour
 {
     private float speed;
 
-    [SerializeField]
-    private Animator fireAnim;
-
     private BoxCollider boxCollider;
 
-
+    float durationMax = 2f;
+    float currentduration;
+    Vector3 _targetPosition;
 
     private bool hit;
 
     public int damage = 20;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        if(collision.gameObject.CompareTag("Player"))
+        transform.Translate(_targetPosition * speed * Time.deltaTime);
+        currentduration += 1 * Time.deltaTime;
+        if (currentduration >= durationMax)
         {
-            //PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            //if (playerHealth != null)
-            //{
-            //    playerHealth.RecevoirDegats(damage);
-            //}
-
-            
             Destroy(gameObject);
         }
-        fireAnim.SetTrigger("Explode");
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (hit) return;
-        float movementSpeed = Time.deltaTime;
-        boxCollider.enabled = false;
-        transform.Translate(movementSpeed, 0, 0);
+        Destroy(gameObject);
+
     }
+
+    public void setTargetPosition(Vector3 targetPosition) { _targetPosition = targetPosition; }
 
 }

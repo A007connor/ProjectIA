@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1311890220823018934}
   - component: {fileID: 7350768145224478048}
   - component: {fileID: -2947335034419174408}
-  - component: {fileID: -7518672996629314561}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -107,17 +106,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2, y: 0.66, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7518672996629314561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789776088676536434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: babb7bca6bd23d44c9a80e4314a3a4ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireAnim: {fileID: 0}
-  damage: 20
