@@ -27,6 +27,7 @@ public class spawnSystem : MonoBehaviour
     {
         if(testSpawner != null)
         {
+            Debug.Log("tryToSave0");
             testSpawner.killedBoss[1] = true; // Or use the appropriate boss index
             testSpawner.SaveGame();
         }

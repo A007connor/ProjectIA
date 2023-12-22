@@ -9,7 +9,7 @@ public class Boss_Minotaur : MonoBehaviour
     public static event BossDeathEventHandler onBossDeath;
 
     [SerializeField] LayerMask wallLayer;
-    [SerializeField] int maxhp = 8;
+    [SerializeField] int maxhp = 1;
     [SerializeField] int currentHp;
     [SerializeField] StateManager currentState;
     [SerializeField] Transform playerTransform;
