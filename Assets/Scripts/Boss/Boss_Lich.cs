@@ -63,13 +63,15 @@ public class Boss_Lich : MonoBehaviour
         
         Destroy(gameObject);
     }
+    
     void SpawnEnemies()
     {
         foreach(Transform spawner in enemySpawners)
         {
-            Instantiate(enemyPrefab, spawner.position, spawner.rotation);
             enemies.setPlayer(player);
-            enemies.setSpawn( spawner);
+            enemies.setSpawn(spawner);
+            Instantiate(enemyPrefab, spawner.position, spawner.rotation);
+            
         }
     }
 }

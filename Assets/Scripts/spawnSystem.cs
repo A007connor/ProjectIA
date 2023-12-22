@@ -31,6 +31,7 @@ public class spawnSystem : MonoBehaviour
             testSpawner.SaveGame();
         }
     }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +54,11 @@ public class spawnSystem : MonoBehaviour
 
             if(dataEnemies != null)
             {
-                Instantiate(gameObject, spawner.position, spawner.rotation);
+
                 dataEnemies.setPlayer(player);
                 dataEnemies.setSpawn(spawner);
+                Instantiate(gameObject, spawner.position, spawner.rotation);
+                
             }               
                 
         }
